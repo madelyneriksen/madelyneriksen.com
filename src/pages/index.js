@@ -8,9 +8,12 @@ export default ({ data }) => (
     <div className="flex flex-wrap flex-column">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Preview
-          excerpt={node.frontmatter.excerpt}
+          excerpt={node.excerpt}
           slug={node.frontmatter.slug}
           title={node.frontmatter.title}
+          category={node.frontmatter.category}
+          image={node.frontmatter.postImage.childImageSharp.fluid}
+          date={node.frontmatter.date}
         />
       ))}
     </div>
@@ -23,10 +26,19 @@ export const query = graphql`
       edges {
         node {
           html
+          excerpt(format: HTML, pruneLength: 255)
           frontmatter {
             slug
             title
-            excerpt
+            category
+            date(formatString: "MMM Do, YYYY")
+            postImage {
+              childImageSharp {
+                fluid(maxWidth: 1080) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
