@@ -1,3 +1,4 @@
 import React from "react"
+import Layout from '../common/layouts/main.js'
 
-export default () => <div>Welcome to my website.</div>
+export default () => <Layout>Welcome to my website.</Layout>
