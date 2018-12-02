@@ -8,7 +8,7 @@ import Me from '../../../content/img/me.jpeg';
 
 export default () => (
   <div className="flex flex-wrap flex-column" style={{gridArea: "sidebar"}}>
-    <div style={{position: "sticky", top: ".5rem;"}}>
+    <div style={{position: "sticky", top: ".5rem"}}>
       <StaticQuery
         query={graphql`
           query {
