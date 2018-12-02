@@ -7,8 +7,10 @@ module.exports = {
       {to: "/contact", text: "CONTACT"},
     ],
     sideBar: {
-      links: [],
-      bio: "",
+      links: [
+        {to: "https://github.com/madelyneriksen/", text: "GITHUB"},
+      ],
+      bio: "This is a short author bio. Doloremque eos laboriosam eum ratione eos. Quibusdam praesentium optio iure molestiae.",
     },
     siteTitle: "madelyn eriksen",
   },
