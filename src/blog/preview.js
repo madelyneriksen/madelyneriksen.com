@@ -10,10 +10,10 @@ export default (props) => (
   <article className="w-100 mv2 bg-white">
     <header className="flex flex-column items-center justify-center pa4">
       <span className="silver tracked f5 sans-serif ttu">{props.category}</span>
-      <h2 className="mid-gray sans-serif mh2 tc">{props.title}</h2>
+      <Link to={props.slug} className="no-underline"><h2 className="mid-gray sans-serif mh2 tc">{props.title}</h2></Link>
       <span className="silver f5 sans-serif">{props.date}</span>
     </header>
-    <Img fluid={props.image} alt="" />
+    <Link to={props.slug}><Img fluid={props.image} alt="" /></Link>
     <Container>
       <div dangerouslySetInnerHTML={{__html: props.excerpt}} />
     </Container>
