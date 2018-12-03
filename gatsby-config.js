@@ -29,9 +29,18 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1400,
+            },
+          },
+        ],
       }
     },
+    
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
