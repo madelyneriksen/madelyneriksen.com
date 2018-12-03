@@ -2,7 +2,6 @@
 
 type: "post"
 title: "Hello world"
-excerpt: ""
 category: "tutorial"
 date: "2018-12-02"
 slug: "/hello-world"
