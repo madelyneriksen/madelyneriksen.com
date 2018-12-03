@@ -16,7 +16,7 @@ export default () => (
         }
       `}
       render={data => (
-        <h1 className="sans-serif">{data.site.siteMetadata.siteTitle}</h1>
+        <h1 className="fw3 sans-serif tracked-tight">{data.site.siteMetadata.siteTitle}</h1>
       )}
     />
   </div>

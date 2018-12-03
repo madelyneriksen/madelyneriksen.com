@@ -13,7 +13,7 @@ module.exports = {
       ],
       bio: "This is a short author bio. Doloremque eos laboriosam eum ratione eos. Quibusdam praesentium optio iure molestiae.",
     },
-    siteTitle: "madelyn eriksen",
+    siteTitle: "madelyn.eriksen()",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
