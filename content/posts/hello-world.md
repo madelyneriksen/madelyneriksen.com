@@ -21,3 +21,15 @@ Enim perspiciatis rerum magni aut similique. Perferendis non odio suscipit vel e
 
 Voluptatem quia veniam quo quos est et exercitationem possimus. Voluptates aut et repudiandae quas eveniet. Quo perferendis ipsa et qui qui. Qui at est reiciendis. Ex accusamus voluptas et perspiciatis asperiores iste quia ipsum.
 
+[Here's a url](https://example.com)
+
+```
+# This is a code block
+git status
+git add -A
+git commit -m "Initial Commit"
+```
+
+> Here is a blockquote. It needs some special emphasis.
+
+![](./img/creek.jpg)
