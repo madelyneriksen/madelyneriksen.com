@@ -9,6 +9,7 @@ module.exports = {
     sideBar: {
       links: [
         {to: "https://github.com/madelyneriksen/", text: "GITHUB"},
+        {to: "/contact", text: "CONTACT ME"}
       ],
       bio: "This is a short author bio. Doloremque eos laboriosam eum ratione eos. Quibusdam praesentium optio iure molestiae.",
     },
