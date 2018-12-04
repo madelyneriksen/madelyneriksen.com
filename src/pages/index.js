@@ -4,7 +4,9 @@ import Preview from '../blog/preview.js';
 import { graphql } from 'gatsby';
 
 export default ({ data }) => (
-  <Layout>
+  <Layout
+    title="Blog Index"
+    description="I'm a developer writing about Python, Javascript, and frameworks like React.">
     <div className="flex flex-wrap flex-column">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Preview

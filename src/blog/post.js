@@ -8,7 +8,8 @@ import { graphql } from 'gatsby';
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout>
+    <Layout
+      title={post.frontmatter.title}>
       <div className="bg-white mv2" style={{gridArea: "content"}}>
         <PostContent
           post={post.html}

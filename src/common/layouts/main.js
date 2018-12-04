@@ -15,6 +15,9 @@ class Layout extends React.Component {
       <React.Fragment>
         <Helmet>
           <body className="bg-near-white mid-gray" />
+          <title>{this.props.title + " - madelyn.eriksen()"}</title>
+          <meta name="description" content={this.props.description} />
+          <meta name="author" content="Madelyn Eriksen" />
         </Helmet>
         <Navbar />
         <Header />

@@ -8,7 +8,9 @@ import { graphql } from 'gatsby';
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout>
+    <Layout
+      title="About Me"
+      description="Madelyn Eriksen is a Javascript, Python, and React developer from Los Angeles. She builds data-driven applications for e-commerce and analytics.">
       <div className="bg-white mv2" style={{gridArea: "content"}}>
         <AboutContent
           post={post.html}
