@@ -6,6 +6,7 @@ category: "tutorial"
 date: "2018-12-02"
 slug: "/hello-world"
 postImage: "./img/creek.jpg"
+metaDescription: "Hello world is a classic phrase in computer science. Here, instead of investigating the origins, I simply use it as filler text for this article."
 
 ---
 

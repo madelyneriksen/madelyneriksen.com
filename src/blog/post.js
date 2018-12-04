@@ -9,7 +9,8 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout
-      title={post.frontmatter.title}>
+      title={post.frontmatter.title}
+      description={post.frontmatter.metaDescription}>
       <div className="bg-white mv2" style={{gridArea: "content"}}>
         <PostContent
           post={post.html}
@@ -30,6 +31,7 @@ export const query = graphql`
         date(formatString: "MMM Do, YYYY")
         category
         title
+        metaDescription
         postImage {
           childImageSharp {
             fluid(maxWidth: 1080) {
