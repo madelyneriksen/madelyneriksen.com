@@ -29,7 +29,7 @@ const StructuredData = (props) => (
             "name": "Madelyn Eriksen",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.madelyneriksen.com/favicon.ico"
+              "url": "https://www.madelyneriksen.com/logo.png"
             }
           },
           "description": "${props.description}"
