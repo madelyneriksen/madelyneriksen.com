@@ -5,7 +5,7 @@ import 'tachyons';
 
 
 export default (props) => (
-  <article className="w-100 mv2 bg-white">
+  <article className="w-100 mv2 bg-white article">
     <header className="flex flex-column items-center justify-center pa4">
       <h2 className="mid-gray sans-serif mh2 tc">{props.title}</h2>
     </header>
