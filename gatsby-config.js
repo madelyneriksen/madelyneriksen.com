@@ -40,13 +40,23 @@ module.exports = {
         ],
       }
     },
-    
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
           families: ['Karla']
         }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: "UA-130489047-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ['/success'],
+        cookieDomain: "www.madelyneriksen.com",
       }
     }
   ]
