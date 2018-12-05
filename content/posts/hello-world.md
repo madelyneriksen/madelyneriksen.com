@@ -24,7 +24,7 @@ Voluptatem quia veniam quo quos est et exercitationem possimus. Voluptates aut e
 
 [Here's a url](https://example.com)
 
-```
+```bash
 # This is a code block
 git status
 git add -A
