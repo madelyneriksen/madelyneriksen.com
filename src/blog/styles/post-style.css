@@ -14,5 +14,10 @@
 
 .article pre {
   background-color: #eee;
+  white-space: pre-wrap;
   padding: .5rem;
+}
+
+.article code {
+  font-size: .9rem;
 }
