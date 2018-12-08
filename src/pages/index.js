@@ -24,7 +24,9 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {type: {eq: "post"}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: {type: {eq: "post"}}},
+      sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {
           html
