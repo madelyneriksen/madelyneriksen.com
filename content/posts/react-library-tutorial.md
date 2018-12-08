@@ -5,16 +5,17 @@ title: "Creating a Component Library for React with Babel 7 and Jest"
 category: "Tutorial"
 date: "2018-12-06"
 slug: "/react-component-library-tutorial"
-postImage: "./img/creek.jpg"
+postImage: "./img/the-trees.jpg"
 metaDescription: "Learn to create a React component library with Babel 7 and Jest. This tutorial will walk you through setting up a new package to be installed by npm."
 
 ---
 
-Recently I was considering creating a reusable component pack to share across projects. Reusable components keep sites visually clean and consistent. Component libraries also promote DRY (Don't Repeat Yourself). What's not to like?
 
-For better or worse, the Javascript world moves very fast, and I had a hard time finding up to date instructions for packaging react components using the new Babel 7.
+Recently I was considering creating a reusable component pack to share across projects. Reusable components keep sites visually clean and consistent. Component libraries also promote DRY (Don't Repeat Yourself) codebases. What's not to like?
 
-So without further ado, here are the steps I came up with for creating what I will call 'a minimally viable react library'.
+You will need a basic experience with React, Javascript, and the command line to follow along. At the end of this tutorial, you'll have a working React package with unit tests powered by Jest. Let's get started setting it up.
+
+**In a rush? Check out the [code on github](TODO: ADD REPO LINK) to see the end result.**
 
 ## Project Initialization
 
@@ -43,7 +44,7 @@ The most important part from this section is setting the entry point to `dist/in
 
 We're going to be using [Babel 7](https://babeljs.io/blog/2018/08/27/7.0.0), which was released mid-2018. All of the packages are under the new `@babel` namespace.
 
-We need Babel for transpiling JSX and ES6 syntax into regular old javasscript, otherwise browsers won't understand our code. Additionally we need a couple of extra packages for Babel/Jest compatibility.
+We need Babel for transpiling JSX and ES6 syntax into regular old javascript, otherwise browsers won't understand our code. Additionally we need a couple of extra packages for Babel/Jest compatibility.
 
 Here's what we'll install:
 
@@ -58,7 +59,7 @@ babel-core@^7.0.0-bridge.0 regenerator-runtime
 npm i --save-dev react react-dom
 ```
 
-I'm not a fan of blindly installing software, so let's talk about each of these packages and why we need them:
+Let's talk about each of these packages and why we need them!
 
 * `@babel/core` - This is the main Babel package for transpiling
 * `@babel/cli` - Command line wrapper for Babel
@@ -72,8 +73,6 @@ I'm not a fan of blindly installing software, so let's talk about each of these 
 These are all the packages we need for creating a minimal package. You don't strictly need webpack for the build and distribution; however if you'd like the dev server go ahead and add it!
 
 ## Adding configuration
-
-`TODO: Show the reader what configuration is needed for the project, including our build script and .babelrc`
 
 We've installed the packages we need for creating our library, but as it stands we don't have any way to use them. We need to create some configuration.
 
@@ -162,8 +161,6 @@ Everything is looking good! Our package is passing its test, babel is compiling 
 
 ## Prepping for (A Local) Publish
 
-`TODO: Tell the reader how to setup a .npmignore, .gitignore, and use npm pack.`
-
 At this point in the tutorial, you have a working babel setup, unit tests running, and a basic React component. Let's take a look at what we need for publishing this!
 
 If you haven't already, now is a good time to create a git repository for your package. We should create a `.gitignore` file so we don't commit what we don't need to:
@@ -229,8 +226,6 @@ export default () => (
 
 ## Wrapping Up
 
-You have just created a React library from start to finish, with unit tests, modern Javascript, and build tools. That's a big accomplishment, so give yourself a pat on the back!
+You have just created a React library from start to finish, with unit tests, modern Javascript, and build tools. That's a big accomplishment, so give yourself a high five and then get coding!!
 
 If you had any issues or would like to suggest edits, please feel free to [contact me](/contact) directly or open an issue on [github](TODO: ADD LINK TO REPO). Alternatively, let me know if you found this article helpful!
-
-Cheers!
