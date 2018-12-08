@@ -1,3 +1,7 @@
+.article p {
+  margin: 1.5rem 0 1.5rem 0
+}
+
 .article a {
   color:  #FF725C; 
 }
@@ -20,4 +24,8 @@
 
 .article code {
   font-size: .9rem;
+}
+
+.article code span {
+  background-color: transparent !important;
 }
