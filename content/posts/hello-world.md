@@ -1,6 +1,6 @@
 ---
 
-type: "post"
+type: "example"
 title: "Hello world"
 category: "tutorial"
 date: "2018-12-02"
