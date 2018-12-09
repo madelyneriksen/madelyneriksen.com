@@ -20,10 +20,12 @@
   background-color: #eee;
   white-space: pre-wrap;
   padding: .5rem;
+  word-wrap: break-word;
 }
 
 .article code {
   font-size: .9rem;
+  white-space: pre-wrap;
 }
 
 .article code span {
