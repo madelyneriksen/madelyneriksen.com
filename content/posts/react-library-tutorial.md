@@ -15,7 +15,7 @@ Recently I was considering creating a reusable component pack to share across pr
 
 You will need a basic experience with React, Javascript, and the command line to follow along. At the end of this tutorial, you'll have a working React package with unit tests powered by Jest. Let's get started setting it up.
 
-**In a rush? Check out the [code on github](TODO: ADD REPO LINK) to see the end result.**
+**In a rush? Check out the [code on github](https://github.com/madelyneriksen/react-library-tutorial) to see the end result.**
 
 ## Project Initialization
 
@@ -235,4 +235,4 @@ export default () => (
 
 You have just created a React library from start to finish, with unit tests, modern Javascript, and build tools. That's a big accomplishment, so give yourself a high five and then get coding!!
 
-If you had any issues or would like to suggest edits, please feel free to [contact me](/contact) directly or open an issue on [github](TODO: ADD LINK TO REPO). Alternatively, let me know if you found this article helpful!
+If you had any issues or would like to suggest edits, please feel free to [contact me](/contact) directly or open an issue on [github](https://github.com/madelyneriksen/react-library-tutorial). Alternatively, let me know if you found this article helpful!
