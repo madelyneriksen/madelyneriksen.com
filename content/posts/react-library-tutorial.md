@@ -28,7 +28,8 @@ npm init
 # npm will ask us some questions here
 package name: my-library
 version: 0.1.0
-main: dist/index.js
+description: A simple React library.
+entry point: dist/index.js
 test command: jest
 git repo: <Your github repo, if you want>
 keywords: My first Library!
@@ -192,7 +193,13 @@ This will prevent us from packing up our source code, tests, and `.babelrc` into
 
 That's it! We're good to go from here. We can test how our package will work with a handy command called `npm pack`. It creates a tarball of a local package, preventing common issues with symlinks.
 
+Build your package with Babel, pack it, and test it out!
+
 ```bash
+# Build using our Babel command
+npm run build
+Successfully compiled 1 file with Babel
+# Let's ship!
 npm pack
 === Tarball Contents ===
 package.json
