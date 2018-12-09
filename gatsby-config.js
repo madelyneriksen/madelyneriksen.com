@@ -11,7 +11,7 @@ module.exports = {
         {to: "https://github.com/madelyneriksen/", text: "GITHUB"},
         {to: "/contact", text: "CONTACT ME"}
       ],
-      bio: "Hej! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
+      bio: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
     },
     siteTitle: "madelyn.eriksen()",
   },
