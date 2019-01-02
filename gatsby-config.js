@@ -9,11 +9,14 @@ module.exports = {
     sideBar: {
       links: [
         {to: "https://github.com/madelyneriksen/", text: "GITHUB"},
+        {to: "https://www.madelyneriksen.com/rss.xml", text: "RSS FEED"},
         {to: "/contact", text: "CONTACT ME"}
       ],
       bio: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
     },
     siteTitle: "madelyn.eriksen()",
+    siteUrl: "https://www.madelyneriksen.com/",
+    siteDescription: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -43,6 +46,61 @@ module.exports = {
           },
         ],
       }
+    },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title: siteTitle
+              description: siteDescription
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] },
+                filter: {frontmatter: {type: {eq: "post"}}}
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    frontmatter {
+                      slug
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: "/rss.xml",
+            title: "madelyn.eriksen() RSS Feed",
+          },
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-web-font-loader',
