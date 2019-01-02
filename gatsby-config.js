@@ -15,7 +15,7 @@ module.exports = {
       bio: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
     },
     siteTitle: "madelyn.eriksen()",
-    siteUrl: "https://www.madelyneriksen.com/",
+    siteUrl: "https://www.madelyneriksen.com",
     siteDescription: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
   },
   plugins: [
