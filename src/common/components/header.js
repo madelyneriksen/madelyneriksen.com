@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 
 export default () => (
-  <div className="w-100 flex items-center justify-center vh-25">
+  <header className="w-100 flex items-center justify-center vh-25">
     <StaticQuery
       query={graphql`
         query {
@@ -19,5 +19,5 @@ export default () => (
         <span className="f2 fw3 sans-serif tracked-tight">{data.site.siteMetadata.siteTitle}</span>
       )}
     />
-  </div>
+  </header>
 )
