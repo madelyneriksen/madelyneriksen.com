@@ -288,5 +288,3 @@ Because GrapheneDjango is only an extension, it's worth learning vanilla Django 
 * [The Django Girls Tutorial](https://tutorial.djangogirls.org/) is an awesome tutorial for getting started with Django. It's how I got started working with the Django framework.
 
 If you liked this tutorial or have questions and need help, you can [contact me here](/contact) or [open an issue on Github.](https://github.com/madelyneriksen/graphql-django-tutorial). I'll get back to you as soon as I can.
-
-If this tutorial was helpful for you, please let me know!
