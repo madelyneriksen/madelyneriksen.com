@@ -1,6 +1,6 @@
 .main-grid {
   display: flex;
-  flex-direction: columns;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 84rem;
   @media screen and (min-width: 30em) {

@@ -1,0 +1,20 @@
+.hover-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background-color: #ff725c;
+  }
+}

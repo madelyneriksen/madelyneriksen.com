@@ -4,9 +4,8 @@ import Link from '../links/hover-link.js';
 
 
 export default () => (
-  <nav className="bg-white w-100 flex justify-center ph2 pv3">
-    <div className="flex flex-wrap items-center justify-around w-100 mw8">
-      <StaticQuery query={graphql`
+  <nav className="navbar">
+    <StaticQuery query={graphql`
         query {
           site {
             siteMetadata {
@@ -21,6 +20,5 @@ export default () => (
       render={data => data.site.siteMetadata.navbarLinks.map((LinkData) => (
         <Link to={LinkData.to}>{LinkData.text}</Link>
       ))} />
-    </div>
   </nav>
 )

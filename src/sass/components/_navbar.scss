@@ -1,0 +1,10 @@
+@import '../utils/spacing';
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: $medium $small;
+  max-width: 84rem;
+  margin: 0 auto;
+}
