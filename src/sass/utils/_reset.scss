@@ -1,0 +1,86 @@
+// Heavily inspired by and adapted from the
+// bitsofco.de reset sheet.
+//
+// https://bitsofco.de/my-css-reset-base/
+
+// Border Box
+*, *:after, *:before { box-sizing: border-box; };
+
+// One Spacing Scheme to Rule Them All
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+// Typography
+body {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+a, a:visited { color: inherit; }
+
+// Please Just Be Blocks
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+    display: block;
+}
+
+// Reset Graphics Stuff
+img,
+video {
+    max-width: 100%;
+}
+
+img {
+    border-style: none;
+}
+
+// Blockquote Stuff
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+
+// SR Helper
+.sr-only {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    left: -9999px;
+    top: -9999px;
+}

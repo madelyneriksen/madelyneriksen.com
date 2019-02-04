@@ -1,5 +1,4 @@
 import React from 'react';
-import 'tachyons';
 import Layout from '../common/layouts/main.js';
 import Form from '../contact/form.js'
 

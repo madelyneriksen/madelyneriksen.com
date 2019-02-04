@@ -1,0 +1,78 @@
+// Google Fonts Import
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,600,600i,800');
+
+$display-font: "Muli";
+$body-font: "Muli";
+
+body {
+  font-size: 1.15rem;
+  font-family: $body-font, sans-serif;
+  color: #444;
+  background-color: #fefefe;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, blockquote, q,
+p {
+  padding: 0 .5rem;
+  margin: 0 0 2rem 0;
+  display: block;
+}
+
+img {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  display: block;
+}
+
+p {
+  font-family: inherit;
+  font-weight: 300;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+pre {
+  background-color: lightgray;
+  padding: .5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  color: #222;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: $display-font, sans-serif;
+  font-weight: 800;
+}
+
+h5, h6 {
+  font-family: $body-font, sans-serif;
+  font-weight: 600;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: inherit; }

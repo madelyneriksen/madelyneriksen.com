@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../common/containers/text-container.js';
 import buttonClasses from '../common/buttons/button-classes.js';
-import 'tachyons';
 
 
 export default class ContactForm extends React.Component {

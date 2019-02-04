@@ -1,5 +1,4 @@
 import React from 'react';
-import 'tachyons';
 import Layout from '../common/layouts/main.js';
 import AboutContent from '../about/about-content.js';
 import { graphql } from 'gatsby';

@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../common/containers/text-container.js';
 import Img from 'gatsby-image';
-import 'tachyons';
 
 
 export default (props) => (

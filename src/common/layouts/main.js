@@ -4,9 +4,7 @@ import Header from '../components/header.js';
 import Navbar from '../components/navbar.js';
 import Sidebar from '../components/sidebar.js';
 import Footer from '../components/footer.js';
-import 'tachyons';
-import './styles/custom.tachyons.css';
-import './styles/grid.css';
+import '../../sass/index.scss';
 
 
 class Layout extends React.Component {
@@ -24,10 +22,10 @@ class Layout extends React.Component {
         </Helmet>
         <Navbar />
         <Header />
-        <div className="blog-grid w-100 mw8 center">
+        <main class="main-grid">
           {this.props.children}
           <Sidebar />
-        </div>
+        </main>
         <Footer />
       </React.Fragment>
     )

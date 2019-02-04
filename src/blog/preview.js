@@ -3,7 +3,6 @@ import Container from '../common/containers/text-container.js';
 import buttonClasses from '../common/buttons/button-classes.js';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
-import 'tachyons';
 
 
 export default (props) => (

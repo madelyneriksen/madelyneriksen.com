@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import 'tachyons';
 import Layout from '../common/layouts/main.js';
 import PostContent from './post-content.js';
 import { graphql } from 'gatsby';

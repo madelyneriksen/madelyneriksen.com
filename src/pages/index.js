@@ -7,7 +7,7 @@ export default ({ data }) => (
   <Layout
     title="Blog Index"
     description="I'm a developer writing about Python, Javascript, and frameworks like React.">
-    <div className="flex flex-wrap flex-column">
+    <div>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Preview
           excerpt={node.excerpt}

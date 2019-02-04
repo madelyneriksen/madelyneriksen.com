@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import 'tachyons';
 import Link from '../links/hover-link.js';
 
 

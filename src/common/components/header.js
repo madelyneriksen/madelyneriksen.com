@@ -1,10 +1,9 @@
 import React from 'react';
-import 'tachyons';
 import { StaticQuery, graphql } from 'gatsby';
 
 
 export default () => (
-  <header className="w-100 flex items-center justify-center vh-25">
+  <header className="header">
     <StaticQuery
       query={graphql`
         query {
@@ -16,7 +15,7 @@ export default () => (
         }
       `}
       render={data => (
-        <span className="f2 fw3 sans-serif tracked-tight">{data.site.siteMetadata.siteTitle}</span>
+        <h1>{data.site.siteMetadata.siteTitle}</h1>
       )}
     />
   </header>

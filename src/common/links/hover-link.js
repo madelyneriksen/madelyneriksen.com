@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import './styles/hoverline.css';
-import 'tachyons';
 
 
 export default (props) => {
