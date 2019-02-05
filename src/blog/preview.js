@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../common/containers/text-container.js';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
@@ -13,7 +12,7 @@ export default (props) => (
       <p>{props.category}</p>
     </div>
     <div
-      className="post-preview__content"
+      className="post-preview__content typography"
       dangerouslySetInnerHTML={{__html: props.excerpt}} />
     <Link to={props.slug} className="button--red">READ MORE</Link>
   </article>

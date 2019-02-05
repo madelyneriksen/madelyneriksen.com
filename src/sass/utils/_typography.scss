@@ -1,11 +1,14 @@
 // Google Fonts Import
 @import url('https://fonts.googleapis.com/css?family=Muli:300,300i,600,600i,800');
 
+// Utilities
+@import './spacing';
+
 $display-font: "Muli";
 $body-font: "Muli";
 
 body {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-family: $body-font, sans-serif;
   color: #444;
   background-color: #fefefe;
@@ -13,46 +16,58 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, blockquote, q,
-p {
-  padding: 0 .5rem;
-  margin: 0 0 2rem 0;
-  display: block;
+/* "Typography" styles.
+ *
+ * These hit all elements inside something tagged typography,
+ * so it ends up being really handy for, say, markdown. */
+
+.typography {
+  h1, h2, h3, h4, h5, h6, blockquote, q,
+  p, ul, .gatsby-highlight {
+    padding: 0 .5rem;
+    margin: 0 0 2rem 0;
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    display: block;
+  }
+
+  p {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  pre, code {
+    font-size: 1rem;
+  }
+
+  pre {
+    padding: .5rem;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 600;
+  }
 }
 
-img {
-  width: 100%;
-  margin: 0 0 2rem 0;
-  display: block;
-}
-
-p {
-  font-family: inherit;
-  font-weight: 300;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-}
-
-blockquote {
-  font-style: italic;
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-pre {
-  background-color: lightgray;
-  padding: .5rem;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: 600;
-}
+/* Header Styles
+ *
+ * These are sitewides and hit all h elements. */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;

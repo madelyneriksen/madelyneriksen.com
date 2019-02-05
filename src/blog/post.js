@@ -51,14 +51,12 @@ export default ({ data }) => {
         date={date}
         description={post.frontmatter.metaDescription}
         slug={post.frontmatter.slug} />
-      <div className="bg-white mv2" style={{gridArea: "content"}}>
-        <PostContent
-          post={post.html}
-          title={post.frontmatter.title}
-          category={post.frontmatter.category}
-          date={post.frontmatter.date}
-          image={post.frontmatter.postImage.childImageSharp.fluid} />
-      </div>
+      <PostContent
+        post={post.html}
+        title={post.frontmatter.title}
+        category={post.frontmatter.category}
+        date={post.frontmatter.date}
+        image={post.frontmatter.postImage.childImageSharp.fluid} />
     </Layout>
   )
 }

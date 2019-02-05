@@ -3,9 +3,9 @@
   flex-direction: column;
   margin: 0 auto;
   max-width: 84rem;
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 60em) {
     display: grid;
-    grid-template-columns: 1fr minmax(min-content, 22rem);
+    grid-template-columns: 1fr minmax(min-content, 24rem);
     grid-template-rows: 1fr;
     gap: 1rem;
   }
