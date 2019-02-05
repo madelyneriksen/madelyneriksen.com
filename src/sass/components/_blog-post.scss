@@ -1,15 +1,15 @@
 @import '../utils/spacing';
 
-.post-preview {
+.blog-post {
   margin: 0 0 $large 0;
   text-align: center;
 }
 
-.post-preview__image {
+.blog-post__image {
   margin-bottom: $medium;
 }
 
-.post-preview__title {
+.blog-post__title {
   text-align: left;
   text-decoration: none;
   display: block;
@@ -17,7 +17,7 @@
   padding: 0 $small;
 }
 
-.post-preview__info {
+.blog-post__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +25,6 @@
   padding: 0 $small;
 }
 
-.post-preview__content {
+.blog-post__content {
   text-align: left;
 }
