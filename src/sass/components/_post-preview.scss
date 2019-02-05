@@ -1,0 +1,26 @@
+@import '../utils/spacing';
+
+.post-preview {
+  margin: 0 0 $large 0;
+  text-align: center;
+}
+
+.post-preview__image {
+  margin-bottom: $medium;
+}
+
+.post-preview__title {
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+
+.post-preview__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-preview__content {
+  text-align: left;
+}

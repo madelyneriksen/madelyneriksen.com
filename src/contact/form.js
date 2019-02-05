@@ -1,6 +1,5 @@
 import React from 'react';
 import Container from '../common/containers/text-container.js';
-import buttonClasses from '../common/buttons/button-classes.js';
 
 
 export default class ContactForm extends React.Component {
@@ -44,8 +43,7 @@ export default class ContactForm extends React.Component {
           <textarea className="bg-white ba b--mid-gray br0 pa2 w-100 sans-serif mid-gray mt2 mb4"
             type="message" name="message" placeholder="Questions, comments, concerns..." rows="5"
             onChange={this.onChange("message")} value={this.state.message}/>
-          <input type="submit" name="submit" value="SUBMIT"
-            className={buttonClasses+" db bg-white sans-serif center mb3"} />
+          <input type="submit" name="submit" value="SUBMIT" />
         </form>
       </div>
     )
