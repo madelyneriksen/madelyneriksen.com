@@ -1,8 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Header from '../components/header.js';
 import Navbar from '../components/navbar.js';
-import Sidebar from '../components/sidebar.js';
 import Footer from '../components/footer.js';
 import '../../sass/index.scss';
 

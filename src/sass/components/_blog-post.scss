@@ -1,41 +1,53 @@
 @import '../utils/spacing';
 
+$text-width: 56rem;
+
 .blog-post {
   margin: 0 0 $large 0;
   text-align: center;
+
+  &__image {
+    margin: 0 auto $medium auto;
+    max-width: $text-width;
+  }
+
+  &__title {
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto $medium auto;
+    max-width: $text-width;
+    padding: 0 $small;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $medium auto;
+    max-width: $text-width;
+    padding: 0 $small;
+    &__tooltip {
+      display: block;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      color: #777;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: $text-width;
+  }
 }
 
-.blog-post__image {
-  margin-bottom: $medium;
-}
-
-.blog-post__title {
-  text-align: left;
-  text-decoration: none;
-  display: block;
-  margin-bottom: $medium;
-  padding: 0 $small;
-}
-
-.blog-post__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: $medium;
-  padding: 0 $small;
-}
-
-.blog-post__info__tooltip {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  color: #777;
-}
-
-.blog-post__content {
-  text-align: left;
+.blog-post--preview {
+  max-width: $text-width;
+  margin: 0 auto $large auto;
+  text-align: center;
 }
