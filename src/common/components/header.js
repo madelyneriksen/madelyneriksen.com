@@ -1,22 +1,11 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 
 
-export default () => (
+export default (props) => (
   <header className="header">
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              siteTitle
-            }
-          }
-        }
-      `}
-      render={data => (
-        <h1>{data.site.siteMetadata.siteTitle}</h1>
-      )}
-    />
+    <h1 className="header__text">{props.text}</h1>
+    <Img fluid={props.image} alt="" className="header__image" />
   </header>
 )

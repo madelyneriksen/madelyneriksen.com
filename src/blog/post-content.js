@@ -1,11 +1,11 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import Header from '../common/components/header';
 
 
 export default (props) => (
   <article className="blog-post">
-    <Img className="blog-post__image" fluid={props.image} alt="" />
-    <h1 className="blog-post__title">{props.title}</h1>
+    <Header text={props.title} image={props.image} />
     <div className="blog-post__info">
       <p className="blog-post__info__tooltip">{props.date}</p>
       <p className="blog-post__info__tooltip">{props.category}</p>

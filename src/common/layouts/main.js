@@ -21,10 +21,8 @@ class Layout extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         </Helmet>
         <Navbar />
-        <Header />
-        <main class="main-grid">
+        <main>
           {this.props.children}
-          <Sidebar />
         </main>
         <Footer />
       </React.Fragment>
