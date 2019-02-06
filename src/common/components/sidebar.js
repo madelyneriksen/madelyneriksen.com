@@ -6,7 +6,7 @@ import Me from '../../../content/img/me.jpeg';
 
 
 export default () => (
-  <aside>
+  <aside class="typography sidebar">
     <StaticQuery
       query={graphql`
         query {
@@ -28,7 +28,7 @@ export default () => (
         <img src={Me} alt="The Author" />
         <p>{data.site.siteMetadata.sideBar.bio}</p> 
       {data.site.siteMetadata.sideBar.links.map((link) => (
-        <Link to={link.to}>{link.text}</Link>
+        <Link className="sidebar__item" to={link.to}>{link.text}</Link>
       ))}
     </React.Fragment>)} />
   </aside>

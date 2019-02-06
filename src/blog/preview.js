@@ -8,8 +8,8 @@ export default (props) => (
     <Link to={props.slug}><Img fluid={props.image} alt="" className="blog-post__image" /></Link>
     <Link to={props.slug} className="blog-post__title"><h2>{props.title}</h2></Link>
     <div className="blog-post__info">
-      <p>{props.date}</p>
-      <p>{props.category}</p>
+      <p className="blog-post__info__tooltip">{props.date}</p>
+      <p className="blog-post__info__tooltip">{props.category}</p>
     </div>
     <div
       className="blog-post__content typography"

@@ -1,0 +1,8 @@
+@import '../utils/spacing';
+
+.sidebar {
+  &__item {
+    display: table;
+    padding: $small 0;
+  }
+}
