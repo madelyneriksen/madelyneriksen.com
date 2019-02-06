@@ -1,16 +1,13 @@
 import React from 'react';
 import Container from '../common/containers/text-container.js';
+import Header from '../common/components/header'
 import Img from 'gatsby-image';
 
 
 export default (props) => (
-  <article className="w-100 mv2 bg-white article">
-    <header className="flex flex-column items-center justify-center pa4">
-      <h2 className="mid-gray sans-serif mh2 tc">{props.title}</h2>
-    </header>
-    <Img fluid={props.image} alt="" />
-    <Container>
-      <div dangerouslySetInnerHTML={{__html: props.post}} />
-    </Container>
+  <article className="blog-post">
+    <Header text={props.title} image={props.image} />
+    <div className="blog-post__info" />
+    <div className="blog-post__content typography" dangerouslySetInnerHTML={{__html: props.post}} />
   </article>
 )
