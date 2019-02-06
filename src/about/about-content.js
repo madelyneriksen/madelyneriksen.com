@@ -1,7 +1,5 @@
 import React from 'react';
-import Container from '../common/containers/text-container.js';
 import Header from '../common/components/header'
-import Img from 'gatsby-image';
 
 
 export default (props) => (
