@@ -2,10 +2,13 @@
 @import './utils/colors';
 
 .button {
-  padding: $medium $large;
+  padding: $medium 5rem;
   text-decoration: none;
-  transition: .1s ease;
+  transition: .2s ease;
   display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 @each $color, $hex in $colors {
@@ -13,13 +16,11 @@
     @extend .button;
     color: $hex;
     border: 1px solid $hex;
-    font-weight: 600;
     &:visited {
       color: $hex;
     }
     &:hover {
-      background-color: $hex;
-      color: white;
+      background-color: rgba($hex, .3);
     }
   }
 }
