@@ -6,14 +6,6 @@ module.exports = {
       {to: "https://github.com/madelyneriksen/", text: "PROJECTS"},
       {to: "/contact", text: "CONTACT"},
     ],
-    sideBar: {
-      links: [
-        {to: "https://github.com/madelyneriksen/", text: "GITHUB"},
-        {to: "https://www.madelyneriksen.com/rss.xml", text: "RSS FEED"},
-        {to: "/contact", text: "CONTACT ME"}
-      ],
-      bio: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
-    },
     siteTitle: "madelyn.eriksen()",
     siteUrl: "https://www.madelyneriksen.com",
     siteDescription: "Hey! I'm Maddie, a developer and nature enthusiast; I blog about webdev, Python, and Linux. Currently I live in Los Angeles working on React apps.",
@@ -102,14 +94,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Karla']
-        }
-      }
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
