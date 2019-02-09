@@ -37,8 +37,8 @@ export default class ContactForm extends React.Component {
         text="Contact Me"
         subtitle="Have some questions or comments for me? Get in touch here!"
       />
-      <section className="blog-post--preview typography">
-        <p className="blog-post__text">Contact me via email at <a href="mailto:hello@madelyneriksen.com">hello@madelyneriksen.com</a>,
+      <section className="text-block--preview typography">
+        <p className="text-block__text">Contact me via email at <a href="mailto:hello@madelyneriksen.com">hello@madelyneriksen.com</a>,
           through my <a href="https://github.com/madelyneriksen">Github account</a>, or use the form below! I'll get back to you as fast as I can.</p>
       </section>
       {this.state.alert &&

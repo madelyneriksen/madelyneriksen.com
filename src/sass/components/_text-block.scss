@@ -1,6 +1,6 @@
 @import '../utils/spacing';
 
-.blog-post {
+.text-block {
   margin: 0 0 $large 0;
   text-align: center;
 
@@ -44,7 +44,7 @@
   }
 }
 
-.blog-post--preview {
+.text-block--preview {
   max-width: $text-width;
   margin: 0 auto $large auto;
   text-align: center;
