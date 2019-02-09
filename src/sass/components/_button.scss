@@ -16,6 +16,7 @@
     @extend .button;
     color: $hex;
     border: 1px solid $hex;
+    background-color: rgba($hex, 0);
     &:visited {
       color: $hex;
     }

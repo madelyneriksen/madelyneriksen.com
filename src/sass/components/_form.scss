@@ -1,0 +1,30 @@
+@import '../utils/spacing';
+@import '../utils/typography';
+
+.form {
+  display: block;
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+  &__label {
+    text-align: left;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: $small;
+    padding: 0 $small;
+  }
+  &__input {
+    text-align: left;
+    display: block;
+    border: none;
+    font-color: #444;
+    background-color: #eee;
+    width: 100%;
+    padding: $small;
+    font-size: 1.15rem;
+    font-family: $body-font;
+    margin-bottom: $medium;
+    resize: none;
+  }
+}

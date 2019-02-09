@@ -1,0 +1,12 @@
+@import '../utils/spacing';
+@import '../utils/colors';
+
+.alert {
+  max-width: $text-width;
+  margin: $large auto;
+  display: block;
+  padding: $medium $small;
+  &--success {
+    background-color: lighten(map-get($colors, green), 40%);
+  }
+}

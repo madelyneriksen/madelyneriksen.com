@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../common/containers/text-container.js';
+import Header from '../common/components/header';
 
 
 export default class ContactForm extends React.Component {
@@ -9,11 +9,12 @@ export default class ContactForm extends React.Component {
       name: '',
       email: '',
       message: '',
-      status: '',
+      alert: '',
     }
     this.onChange = this.onChange.bind(this);
-    this.url = "https://briskforms.com/go/93b00d43bdfa0d3603b43049e92ba5ac";
+    this.url = "https://www.briskforms.com/go/163e3ec754f10b5e604dac66ba7961bc";
   }
+
   onChange(fieldName) {
     return (event) => {
       this.setState({
@@ -22,30 +23,68 @@ export default class ContactForm extends React.Component {
     }
   }
 
+  componentDidMount() {
+    try {
+      const url = new URL(window.location.href);
+      this.setState({alert: url.searchParams.get("alert")});
+    } catch(err) {}
+  }
+
   render() {
     return (
-      <div className="pa2">
-        <h1 className="sans-serif tc">Contact Me</h1>
-        <Container>
-          <p className="mw6 center">Have some questions or want to work with me? Or maybe you'd just like to say hello? Send me a message here! I'm interested in hearing what you have to say.</p>
-        </Container>
-        <p>{this.state.status}</p>
-        <form className="w-100 center mw6" action={this.url} method="POST">
-          <label for="name" className="sans-serif f4">Your Name</label>
-          <input className="bg-white ba b--mid-gray br0 pa2 w-100 sans-serif mid-gray mt2 mb4"
-            type="text" name="name" placeholder="Your Name" required
-            onChange={this.onChange("name")} value={this.state.name}/>
-          <label for="email" className="sans-serif f4">Email Address</label>
-          <input className="bg-white ba b--mid-gray br0 pa2 w-100 sans-serif mid-gray mt2 mb4"
-            type="email" name="email" placeholder="Your Email" required
-            onChange={this.onChange("email")} value={this.state.email}/>
-          <label for="message" className="sans-serif f4">Write Your Message</label>
-          <textarea className="bg-white ba b--mid-gray br0 pa2 w-100 sans-serif mid-gray mt2 mb4"
-            type="message" name="message" placeholder="Questions, comments, concerns..." rows="5"
-            onChange={this.onChange("message")} value={this.state.message}/>
-          <input type="submit" name="submit" value="SUBMIT" />
-        </form>
-      </div>
+      <>
+      <Header
+        text="Contact Me"
+        subtitle="Have some questions or comments for me? Get in touch here!"
+      />
+      <section className="blog-post--preview typography">
+        <p className="blog-post__text">Contact me via email at <a href="mailto:hello@madelyneriksen.com">hello@madelyneriksen.com</a>,
+          through my <a href="https://github.com/madelyneriksen">Github account</a>, or use the form below! I'll get back to you as fast as I can.</p>
+      </section>
+      {this.state.alert &&
+        <div className="alert alert--success" role="alert">{this.state.alert}</div>
+      }
+      <form
+        className="form"
+        action={this.url}
+        method="POST">
+        <label
+          for="name"
+          className="form__label">Your Name</label>
+        <input
+          className="form__input"
+          type="text"
+          name="name"
+          placeholder="ex. Tony Stark"
+          required
+          onChange={this.onChange("name")} value={this.state.name} />
+        <label
+          for="email"
+          className="form__label">Email Address</label>
+        <input
+          className="form__input"
+          type="email"
+          name="email"
+          placeholder="ex. tony@stark.io"
+          required
+          onChange={this.onChange("email")}
+          value={this.state.email} />
+        <label
+          for="message"
+          className="form__label">Write Your Message</label>
+        <textarea
+          className="form__input"
+          type="message"
+          name="message"
+          placeholder="ex. We're building a team..."
+          rows="5"
+          onChange={this.onChange("message")}
+          value={this.state.message} />
+        <button
+          type="submit"
+          className="button--red form__submit">SEND MESSAGE</button>
+      </form>
+      </>
     )
   }
 }
