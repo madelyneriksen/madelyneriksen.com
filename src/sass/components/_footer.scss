@@ -1,0 +1,20 @@
+@import '../utils/spacing';
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: $large $small;
+  font-size: 1rem;
+  &__links {
+    width: 100%;
+    max-width: 24em;
+    text-align: center;
+  }
+  &__link {
+    display: block;
+    padding: $small 0;
+  }
+}

@@ -3,8 +3,17 @@ import React from 'react';
 
 export default (props) => (
   <footer className="footer">
-    <p>Created with &lt;3 and React.</p>
-    <p>Grab the source code <a href="https://github.com/madelyneriksen/madelyneriksen.com">here!</a></p>
-    <p>Copyright 2018 Madelyn Eriksen</p>
+    <section className="footer__links">
+      <a
+        className="footer__link"
+        href="https://github.com/madelyneriksen">Github</a>
+      <a
+        className="footer__link"
+        href="/rss.xml">RSS Feed</a>
+    </section>
+    <section className="footer__links">
+      <p className="footer__link">Created with ✨🌈 and React.</p>
+      <p className="footer__link">Copyright 2018-2019 Madelyn Eriksen</p>
+    </section>
   </footer>
 )
