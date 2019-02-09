@@ -12,7 +12,7 @@ export default (props) => (
         href="/rss.xml">RSS Feed</a>
     </section>
     <section className="footer__links">
-      <p className="footer__link">Created with ✨🌈 and React.</p>
+      <p className="footer__link">Created with <span role="img" aria-label="magic">✨🌈</span> and React.</p>
       <p className="footer__link">Copyright 2018-2019 Madelyn Eriksen</p>
     </section>
   </footer>
