@@ -12,7 +12,7 @@ export default class ContactForm extends React.Component {
       alert: '',
     }
     this.onChange = this.onChange.bind(this);
-    this.url = "https://www.briskforms.com/go/163e3ec754f10b5e604dac66ba7961bc";
+    this.url = "https://www.briskforms.com/go/e1229760edb271ce7bf33a755f5ff529";
   }
 
   onChange(fieldName) {
