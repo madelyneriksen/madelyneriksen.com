@@ -42,7 +42,10 @@ export default class ContactForm extends React.Component {
           through my <a href="https://github.com/madelyneriksen">Github account</a>, or use the form below! I'll get back to you as fast as I can.</p>
       </section>
       {this.state.alert &&
-        <div className="alert alert--success" role="alert">{this.state.alert}</div>
+        <div
+          className="alert alert--success"
+        role="alert">Awesome! Your message was sent successfully! <span role="img" aria-label="celebrate!">🙌</span>
+        </div>
       }
       <form
         className="form"
