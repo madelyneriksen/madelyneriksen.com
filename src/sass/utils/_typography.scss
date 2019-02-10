@@ -63,6 +63,11 @@ body {
   strong {
     font-weight: 600;
   }
+
+  li {
+    list-style-position: inside;
+    margin-bottom: $small;
+  }
 }
 
 /* Header Styles
