@@ -1,32 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import Seo from './seo';
 import Layout from '../common/layouts/main.js';
 import PostContent from './post-content.js';
 import { graphql } from 'gatsby';
-
-
-const StructuredData = (props) => (
-  <Helmet>
-    <script type="application/ld+json">{`
-      {
-        "@context": "http://schema.org",
-          "@type": "Blog",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.madelyneriksen.com${props.slug}"
-          },
-          "headline": "${props.title}",
-          "image": ["https://www.madelyneriksen.com${props.image}"],
-          "datePublished": "${props.date}",
-          "author": {
-            "@type": "Person",
-            "name": "Madelyn Eriksen"
-          },
-          "description": "${props.description}"
-      }
-    `}</script>
-  </Helmet>
-)
 
 
 export default ({ data }) => {
@@ -36,7 +12,7 @@ export default ({ data }) => {
     <Layout
       title={post.frontmatter.title}
       description={post.frontmatter.metaDescription}>
-      <StructuredData
+      <Seo
         title={post.frontmatter.title}
         image={post.frontmatter.postImage.childImageSharp.original.src}
         date={date}
