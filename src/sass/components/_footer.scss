@@ -13,8 +13,9 @@
     max-width: 24em;
     text-align: center;
   }
-  &__link {
+  &__link, &__link:visited {
     display: block;
     padding: $small 0;
+    color: inherit;
   }
 }
