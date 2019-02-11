@@ -10,7 +10,7 @@ const StructuredData = (props) => (
     <script type="application/ld+json">{`
       {
         "@context": "http://schema.org",
-          "@type": "Article",
+          "@type": "Blog",
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://www.madelyneriksen.com${props.slug}"
@@ -18,18 +18,9 @@ const StructuredData = (props) => (
           "headline": "${props.title}",
           "image": ["https://www.madelyneriksen.com${props.image}"],
           "datePublished": "${props.date}",
-          "dateModified": "${props.date}",
           "author": {
             "@type": "Person",
             "name": "Madelyn Eriksen"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Madelyn Eriksen",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.madelyneriksen.com/logo.png"
-            }
           },
           "description": "${props.description}"
       }
