@@ -1,7 +1,8 @@
 madelyn.eriksen() - My Website
 ======
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea093b5f-fe48-4536-9082-e6c9a570915b/deploy-status)](https://app.netlify.com/sites/madelyneriksen/deploys)
 
-[madelyn.eriksen()](https://www.madelyneriksen.com) is my personal website, weblog, and home on the web. Built with Gatsby.js, powered by React, and styled with Tachyons.
+[madelyn.eriksen()](https://www.madelyneriksen.com) is my personal website, weblog, and home on the web. Built with Gatsby.js, powered by React, and styled with Sass.
 
 ## Getting Started
 
