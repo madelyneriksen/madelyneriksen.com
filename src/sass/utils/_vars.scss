@@ -1,8 +1,32 @@
-// Colors used throughout the site.
+// Neutrals
+$dark: #292929;
+$light: #C2C2C2;
+$white: #fff;
+
+// Old/Warning colors.
+$red: #ff725c;
+$green: #33cc33;
+
+// New rosy, floral colors.
+$rose: #F15D6D;
+$violet: #786BE2;
+$plum: #D86085;
+
+// It's nice to have a map and variables.
 $colors: (
-  red: #ff725c,
-  green: #33cc33,
+  red: $red,
+  green: $green,
+  rose: $rose,
+  plum: $plum,
+  violet: $violet,
 );
+
+// Gradient reuse.
+$primary-gradient: linear-gradient(to right, $violet, $rose);
+$secondary-gradient: linear-gradient(to right, $rose, $plum);
+
+// Box shadow.
+$glow: 0 0 8px rgba($rose, .5);
 
 // Spacing utilities.
 $extra-small: .25rem;
