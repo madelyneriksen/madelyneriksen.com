@@ -21,7 +21,7 @@ export default () => (
       render={data => (
         <nav className="navbar">
           <section className="navbar__group">
-            <h3 className="navbar__title">madelyn.eriksen()</h3>
+            <Link className="navbar__title" to="/">madelyn.eriksen()</Link>
           </section>
           <section className="navbar__group navbar__buttons">
             {data.site.siteMetadata.navbarLinks.map((LinkData) => (
