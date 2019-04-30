@@ -12,7 +12,7 @@ const NavbarSlider = (props) => {
       <button
         onClick={() => setOpen(!open)}
         className="navbar__link">
-        Menu
+        {!open ? "Menu" : "Close"}
       </button>
       <div
         className={"navbar__menu" + (open ? " navbar__menu--active" : "")}>
