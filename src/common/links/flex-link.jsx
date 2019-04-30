@@ -9,6 +9,6 @@ export default (props) => {
   if (internal) {
     return <Link {...props}>{props.children}</Link>;
   } else {
-    return <a {...props}>{props.children}</a>;
+    return <a {...props} href={props.to}>{props.children}</a>;
   }
 }
