@@ -3,7 +3,11 @@
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid $light;
-  min-height: 5rem;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
 
   &__group {
     display: flex;
@@ -42,19 +46,22 @@
   &__menu {
     position: fixed;
     width: 0;
-    max-width: 36rem;
     height: 100vh;
-    top: 0;
+    top: 5rem;
     right: 0;
     background-color: $white;
     padding: $small;
     display: none;
-    z-index: 100;
+    z-index: 90;
 
     &--active {
       display: block;
       width: 100%;
-      box-shadow: 0 0 8px rgba($dark, .3);
+    }
+
+    &__items {
+      max-width: 48rem;
+      margin: auto;
     }
   }
 }
