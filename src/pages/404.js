@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../common/components/header';
 import { Link } from 'gatsby';
-import Layout from '../common/layouts/main.js';
+import Layout from '../common/layouts/main';
 
 
 export default () => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Seo from './seo';
-import Layout from '../common/layouts/main.js';
-import PostContent from './post-content.js';
+import Layout from '../common/layouts/main';
+import PostContent from './post-content';
 import { graphql } from 'gatsby';
 
 
