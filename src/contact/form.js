@@ -85,7 +85,7 @@ export default class ContactForm extends React.Component {
           value={this.state.message} />
         <button
           type="submit"
-          className="button--red form__submit">SEND MESSAGE</button>
+          className="button--rose form__submit">SEND MESSAGE</button>
       </form>
       </>
     )

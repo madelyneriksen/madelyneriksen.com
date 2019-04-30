@@ -10,7 +10,7 @@ export default () => (
     <section className="text-block--preview">
       <p>That's definitely a 404 (Page Not Found)! Double check the url, or head back to the homepage?</p>
       <br />
-      <Link to="/" className="button--red">HOME</Link>
+      <Link to="/" className="button--rose">HOME</Link>
     </section>
   </Layout>
 )
