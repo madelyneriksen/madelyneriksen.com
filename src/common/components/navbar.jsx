@@ -51,7 +51,7 @@ export default () => (
     <section className="navbar__group">
       <h3 className="navbar__title">madelyn.eriksen()</h3>
     </section>
-    <section className="navbar__group">
+    <section className="navbar__group navbar__buttons">
       <StaticQuery query={graphql`
           query {
             site {

@@ -4,11 +4,22 @@
   align-items: center;
   border-bottom: 1px solid $light;
   min-height: 5rem;
+
   &__group {
-    width: 100%;
     display: flex;
     justify-content: center;
+    @include responsive("medium") {
+      width: 100%;
+    }
   }
+
+  &__buttons {
+    display: none;
+    @include responsive("large") {
+      display: flex;
+    }
+  }
+
   &__link {
     color: inherit;
     background-color: transparent;
@@ -19,6 +30,7 @@
     margin: 0 .5rem;
     font-size: 1rem;
     cursor: pointer;
+
     &--active {
       background: $secondary-gradient;
       box-shadow: $glow;
@@ -26,6 +38,7 @@
       border: 0;
     }
   }
+
   &__menu {
     position: fixed;
     width: 0;
@@ -37,6 +50,7 @@
     padding: $small;
     display: none;
     z-index: 100;
+
     &--active {
       display: block;
       width: 100%;
