@@ -5,12 +5,15 @@ import Link from '../../links/flex-link';
 const NavbarSlider = (props) => {
   const [open, setOpen] = useState(false);
 
-  const { links } = props;
+  const { links, setScroll, scroll } = props;
 
   return (
     <section className="navbar__group">
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setOpen(!open);
+          setScroll(!scroll);
+        }}
         className="navbar__link">
         {!open ? "Menu" : "Close"}
       </button>

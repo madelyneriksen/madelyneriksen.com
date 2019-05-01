@@ -4,9 +4,11 @@ import Link from '../../links/flex-link';
 import NavbarSlider from './slider';
 
 
-export default () => (
-  <StaticQuery
-    query={graphql`
+export default props => {
+  const {scroll, setScroll} = props;
+  return (
+    <StaticQuery
+      query={graphql`
         query {
           site {
             siteMetadata {
@@ -32,9 +34,13 @@ export default () => (
                 {LinkData.text}
               </Link>
             ))}
-        </section>
-        <NavbarSlider links={data.site.siteMetadata.navbarLinks} />
-      </nav>
+          </section>
+          <NavbarSlider
+            setScroll={setScroll}
+            scroll={scroll}
+            links={data.site.siteMetadata.navbarLinks} />
+        </nav>
       )}
     />
-)
+  )
+}

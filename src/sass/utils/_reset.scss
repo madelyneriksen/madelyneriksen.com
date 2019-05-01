@@ -83,3 +83,8 @@ q:before {
     left: -9999px;
     top: -9999px;
 }
+
+// Helper no scroll class
+.noscroll {
+  overflow: hidden;
+}
