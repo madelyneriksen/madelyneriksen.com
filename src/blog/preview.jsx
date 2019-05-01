@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 
 export default (props) => (
-  <article class="text-block--preview">
+  <article className="text-block--preview">
     <Header text={props.title} image={props.image} />
     <div className="text-block__info">
       <p className="text-block__info__tooltip">{props.date}</p>

@@ -11,6 +11,7 @@ export default ({ data }) => (
     <Header text="madelyn.eriksen()" subtitle="A programming blog by a hacker girl." />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <Preview
+        key={node.frontmatter.slug}
         excerpt={node.excerpt}
         slug={node.frontmatter.slug}
         title={node.frontmatter.title}

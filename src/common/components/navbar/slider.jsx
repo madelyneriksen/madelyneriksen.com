@@ -23,6 +23,7 @@ const NavbarSlider = (props) => {
           {links.map(link => (
             <Link
               to={link.to}
+              key={link.to}
               activeClassName="pill--active"
               className="pill">
               {link.text}

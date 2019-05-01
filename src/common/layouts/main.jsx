@@ -7,7 +7,6 @@ import '../../sass/index.scss';
 
 const Layout = props => {
   const [scroll, setScroll] = useState(true);
-  console.log(setScroll);
   const {
     description,
     title,
