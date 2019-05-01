@@ -15,7 +15,8 @@
     text-align: left;
     display: block;
     border: none;
-    font-color: #444;
+    border-radius: $extra-small;
+    font-color: $dark;
     background-color: #eee;
     width: 100%;
     padding: $small;
