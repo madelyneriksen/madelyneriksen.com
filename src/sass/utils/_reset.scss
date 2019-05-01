@@ -40,8 +40,6 @@ body {
   line-height: 1.6;
 }
 
-a, a:visited { color: inherit; }
-
 // Please Just Be Blocks
 article,
 aside,
@@ -84,4 +82,9 @@ q:before {
     clip: rect(1px, 1px, 1px, 1px);
     left: -9999px;
     top: -9999px;
+}
+
+// Helper no scroll class
+.noscroll {
+  overflow: hidden;
 }

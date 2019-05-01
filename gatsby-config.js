@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     navbarLinks: [
-      {to: "/", text: "HOME"},
-      {to: "/about", text: "ABOUT"},
-      {to: "https://github.com/madelyneriksen/", text: "PROJECTS"},
-      {to: "/contact", text: "CONTACT"},
+      {to: "/", text: "Home"},
+      {to: "/about", text: "About"},
+      {to: "/contact", text: "Contact"},
+      {to: "https://github.com/madelyneriksen/", text: "Github"},
     ],
     siteTitle: "madelyn.eriksen()",
     siteUrl: "https://www.madelyneriksen.com",

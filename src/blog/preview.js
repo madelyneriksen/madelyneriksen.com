@@ -13,6 +13,6 @@ export default (props) => (
     <div
       className="text-block__content typography"
       dangerouslySetInnerHTML={{__html: props.excerpt}} />
-    <Link to={props.slug} className="button--red">READ MORE</Link>
+    <Link to={props.slug} className="button--rose">READ MORE</Link>
   </article>
 )

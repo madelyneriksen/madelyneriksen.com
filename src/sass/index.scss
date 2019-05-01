@@ -4,18 +4,18 @@
  *
  * Think resets, base styles, etc. */
 @import './utils/reset';
+@import './utils/vars';
+@import './utils/mixins';
 @import './utils/typography';
 
 /* Component Imports
  *
  * Like class names for components. */
-@import './components/grid';
-@import './components/hover-link';
+@import './components/button';
+@import './components/pill';
 @import './components/navbar';
 @import './components/header';
 @import './components/footer';
 @import './components/form';
 @import './components/alert';
 @import './components/text-block';
-@import './components/button';
-@import './components/sidebar';
