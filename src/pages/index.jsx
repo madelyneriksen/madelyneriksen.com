@@ -1,13 +1,14 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../common/layouts/main';
 import Header from '../common/components/header';
 import Preview from '../blog/preview';
-import { graphql } from 'gatsby';
 
 export default ({ data }) => (
   <Layout
     title="Blog Index"
-    description="I'm a developer writing about Python, Javascript, and frameworks like React.">
+    description="I'm a developer writing about Python, Javascript, and frameworks like React."
+  >
     <Header text="madelyn.eriksen()" subtitle="A programming blog by a hacker girl." />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <Preview
@@ -21,7 +22,7 @@ export default ({ data }) => (
       />
     ))}
   </Layout>
-)
+);
 
 export const query = graphql`
   query {
@@ -49,4 +50,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

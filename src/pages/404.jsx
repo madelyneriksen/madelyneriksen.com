@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../common/components/header';
 import { Link } from 'gatsby';
+import Header from '../common/components/header';
 import Layout from '../common/layouts/main';
 
 
@@ -13,4 +13,4 @@ export default () => (
       <Link to="/" className="button--rose">HOME</Link>
     </section>
   </Layout>
-)
+);

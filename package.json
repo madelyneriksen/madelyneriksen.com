@@ -6,7 +6,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "test": "eslint 'src/**' --ignore-pattern *.scss"
   },
   "dependencies": {
     "gatsby": "^2.3.31",

@@ -4,8 +4,8 @@ import Link from '../../links/flex-link';
 import NavbarSlider from './slider';
 
 
-export default props => {
-  const {scroll, setScroll} = props;
+export default (props) => {
+  const { scroll, setScroll } = props;
   return (
     <StaticQuery
       query={graphql`
@@ -26,11 +26,12 @@ export default props => {
             <Link className="navbar__title" to="/">madelyn.eriksen()</Link>
           </section>
           <section className="navbar__group navbar__buttons">
-            {data.site.siteMetadata.navbarLinks.map((LinkData) => (
+            {data.site.siteMetadata.navbarLinks.map(LinkData => (
               <Link
                 to={LinkData.to}
                 activeClassName="navbar__link--active"
-                className="navbar__link">
+                className="navbar__link"
+              >
                 {LinkData.text}
               </Link>
             ))}
@@ -38,9 +39,10 @@ export default props => {
           <NavbarSlider
             setScroll={setScroll}
             scroll={scroll}
-            links={data.site.siteMetadata.navbarLinks} />
+            links={data.site.siteMetadata.navbarLinks}
+          />
         </nav>
       )}
     />
-  )
-}
+  );
+};

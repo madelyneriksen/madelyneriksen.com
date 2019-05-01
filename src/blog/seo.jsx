@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-export default (props) => (
+export default props => (
   <Helmet>
-    <script type="application/ld+json">{`
+    <script type="application/ld+json">
+      {`
       {
         "@context": "http://schema.org",
           "@type": "Blog",
@@ -20,7 +21,8 @@ export default (props) => (
           },
           "description": "${props.description}"
       }
-    `}</script>
+    `}
+    </script>
     <meta property="og:title" content={props.title} />
     <meta property="og:type" content="article" />
     <meta property="og:url" content={`https://www.madelyneriksen.com${props.slug}`} />
@@ -32,4 +34,4 @@ export default (props) => (
     <meta property="og:article:author:lastname" content="Eriksen" />
     <meta property="og:article:author:gender" content="female" />
   </Helmet>
-)
+);

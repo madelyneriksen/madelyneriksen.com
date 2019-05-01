@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 import '../../sass/index.scss';
 
 
-const Layout = props => {
+const Layout = (props) => {
   const [scroll, setScroll] = useState(true);
   const {
     description,
@@ -15,10 +15,10 @@ const Layout = props => {
   return (
     <React.Fragment>
       <Helmet>
-        <body className={scroll ? null : "noscroll"} />
-        <title>{title + " - madelyn.eriksen()"}</title>
-        {description &&
-            <meta name="description" content={description} />
+        <body className={scroll ? null : 'noscroll'} />
+        <title>{`${title} - madelyn.eriksen()`}</title>
+        {description
+            && <meta name="description" content={description} />
         }
         <meta name="author" content="Madelyn Eriksen" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -31,7 +31,7 @@ const Layout = props => {
       </main>
       <Footer />
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default Layout;

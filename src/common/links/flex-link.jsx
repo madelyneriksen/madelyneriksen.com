@@ -8,7 +8,6 @@ export default (props) => {
   const internal = /^\/(?!\/)/.test(props.to);
   if (internal) {
     return <Link {...props}>{props.children}</Link>;
-  } else {
-    return <a {...props} href={props.to}>{props.children}</a>;
   }
-}
+  return <a {...props} href={props.to}>{props.children}</a>;
+};

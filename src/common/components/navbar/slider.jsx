@@ -14,25 +14,28 @@ const NavbarSlider = (props) => {
           setOpen(!open);
           setScroll(!scroll);
         }}
-        className="navbar__link">
-        {!open ? "Menu" : "Close"}
+        className="navbar__link"
+      >
+        {!open ? 'Menu' : 'Close'}
       </button>
       <div
-        className={"navbar__menu" + (open ? " navbar__menu--active" : "")}>
+        className={`navbar__menu${open ? ' navbar__menu--active' : ''}`}
+      >
         <div className="navbar__menu__items">
           {links.map(link => (
             <Link
               to={link.to}
               key={link.to}
               activeClassName="pill--active"
-              className="pill">
+              className="pill"
+            >
               {link.text}
             </Link>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 };
 
 export default NavbarSlider;

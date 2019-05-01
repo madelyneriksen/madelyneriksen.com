@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../common/components/header';
 import { Link } from 'gatsby';
+import Header from '../common/components/header';
 
 
-export default (props) => (
+export default props => (
   <article className="text-block--preview">
     <Header text={props.title} image={props.image} />
     <div className="text-block__info">
@@ -12,7 +12,8 @@ export default (props) => (
     </div>
     <div
       className="text-block__content typography"
-      dangerouslySetInnerHTML={{__html: props.excerpt}} />
+      dangerouslySetInnerHTML={{ __html: props.excerpt }}
+    />
     <Link to={props.slug} className="button--rose">READ MORE</Link>
   </article>
-)
+);
