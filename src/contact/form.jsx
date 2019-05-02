@@ -49,8 +49,10 @@ export default class ContactForm extends React.Component {
         <section className="text-block--preview typography">
           <p className="text-block__content">
             Contact me via email at
+            {' '}
             <a href="mailto:hello@madelyneriksen.com">hello@madelyneriksen.com</a>
             , through my
+            {' '}
             <a href="https://github.com/madelyneriksen">Github account</a>
             , or use the form below! I will get back to you as fast as I can.
           </p>
