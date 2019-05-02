@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Seo from './seo';
 import Layout from '../common/layouts/main';
 import PostContent from './post-content';
 
 
-export default ({ data }) => {
+const Post = ({ data }) => {
   const { post } = data;
   const { date } = data.date.frontmatter;
   return (
@@ -30,6 +31,13 @@ export default ({ data }) => {
     </Layout>
   );
 };
+
+Post.propTypes = {
+  // eslint-disable-next-line
+  data: PropTypes.object.isRequired,
+};
+
+export default Post;
 
 export const query = graphql`
   query($slug: String!) {

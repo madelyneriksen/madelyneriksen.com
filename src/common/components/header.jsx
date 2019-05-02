@@ -1,36 +1,49 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 
-export default (props) => {
-  const textClass = props.image ? 'header__text' : 'header__text--dark';
+const Header = (props) => {
+  const {
+    image,
+    text,
+    subtitle,
+  } = props;
+  const textClass = image ? 'header__text' : 'header__text--dark';
   return (
     <header
-      className={props.image ? 'header' : 'header--dark'}
+      className={image ? 'header' : 'header--dark'}
     >
       <h1
         className={`${textClass} header__title`}
       >
-        {props.text}
+        {text}
       </h1>
-      {props.subtitle
-      && (
-      <p
-        className={textClass}
-      >
-        {props.subtitle}
-      </p>
-      )
-    }
-      {props.image
-      && (
-      <Img
-        fluid={props.image}
-        alt=""
-        className="header__image"
-      />
-      )
-    }
+      {subtitle
+          && (<p className={textClass}>{subtitle}</p>)
+      }
+      {image
+          && (
+            <Img
+              fluid={image}
+              alt=""
+              className="header__image"
+            />
+          )
+      }
     </header>
   );
 };
+
+Header.propTypes = {
+  // eslint-disable-next-line
+  image: PropTypes.object,
+  text: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+};
+
+Header.defaultProps = {
+  subtitle: false,
+};
+
+export default Header;

@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from '../../links/flex-link';
 import NavbarSlider from './slider';
 
 
-export default (props) => {
+const Navbar = (props) => {
   const { scroll, setScroll } = props;
   return (
     <StaticQuery
@@ -46,3 +47,10 @@ export default (props) => {
     />
   );
 };
+
+Navbar.propTypes = {
+  scroll: PropTypes.bool.isRequired,
+  setScroll: PropTypes.func.isRequired,
+};
+
+export default Navbar;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
@@ -32,6 +33,16 @@ const Layout = (props) => {
       <Footer />
     </React.Fragment>
   );
+};
+
+Layout.propTypes = {
+  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+};
+
+Layout.defaultProps = {
+  description: false,
 };
 
 export default Layout;

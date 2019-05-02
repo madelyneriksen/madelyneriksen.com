@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../common/layouts/main';
 import AboutContent from '../about/about-content';
 
 
-export default ({ data }) => {
+const About = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout
@@ -21,6 +22,13 @@ export default ({ data }) => {
     </Layout>
   );
 };
+
+About.propTypes = {
+  // eslint-disable-next-line
+  data: PropTypes.object,
+};
+
+export default About;
 
 export const query = graphql`
   query {

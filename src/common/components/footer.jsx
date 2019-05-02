@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 
-export default props => (
+export default () => (
   <footer className="footer">
     <section className="footer__links">
       <a

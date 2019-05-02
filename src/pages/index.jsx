@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../common/layouts/main';
 import Header from '../common/components/header';
 import Preview from '../blog/preview';
 
-export default ({ data }) => (
+const Index = ({ data }) => (
   <Layout
     title="Blog Index"
     description="I'm a developer writing about Python, Javascript, and frameworks like React."
@@ -23,6 +24,13 @@ export default ({ data }) => (
     ))}
   </Layout>
 );
+
+Index.propTypes = {
+  // eslint-disable-next-line
+  data: PropTypes.object.isRequired,
+};
+
+export default Index;
 
 export const query = graphql`
   query {
