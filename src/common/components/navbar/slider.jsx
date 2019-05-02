@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Link from '../../links/flex-link';
 
 
@@ -14,24 +15,40 @@ const NavbarSlider = (props) => {
           setOpen(!open);
           setScroll(!scroll);
         }}
-        className="navbar__link">
-        {!open ? "Menu" : "Close"}
+        type="button"
+        className="navbar__link"
+      >
+        {!open ? 'Menu' : 'Close'}
       </button>
       <div
-        className={"navbar__menu" + (open ? " navbar__menu--active" : "")}>
+        className={`navbar__menu${open ? ' navbar__menu--active' : ''}`}
+      >
         <div className="navbar__menu__items">
           {links.map(link => (
             <Link
               to={link.to}
+              key={link.to}
               activeClassName="pill--active"
-              className="pill">
+              className="pill"
+            >
               {link.text}
             </Link>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
+};
+
+NavbarSlider.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  setScroll: PropTypes.func.isRequired,
+  scroll: PropTypes.bool.isRequired,
 };
 
 export default NavbarSlider;

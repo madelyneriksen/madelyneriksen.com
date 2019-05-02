@@ -1,16 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Layout from '../common/layouts/main';
 import Header from '../common/components/header';
-import Preview from '../blog/preview.js';
-import { graphql } from 'gatsby';
+import Preview from '../blog/preview';
 
-export default ({ data }) => (
+const Index = ({ data }) => (
   <Layout
     title="Blog Index"
-    description="I'm a developer writing about Python, Javascript, and frameworks like React.">
+    description="I'm a developer writing about Python, Javascript, and frameworks like React."
+  >
     <Header text="madelyn.eriksen()" subtitle="A programming blog by a hacker girl." />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <Preview
+        key={node.frontmatter.slug}
         excerpt={node.excerpt}
         slug={node.frontmatter.slug}
         title={node.frontmatter.title}
@@ -20,7 +23,14 @@ export default ({ data }) => (
       />
     ))}
   </Layout>
-)
+);
+
+Index.propTypes = {
+  // eslint-disable-next-line
+  data: PropTypes.object.isRequired,
+};
+
+export default Index;
 
 export const query = graphql`
   query {
@@ -48,4 +58,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

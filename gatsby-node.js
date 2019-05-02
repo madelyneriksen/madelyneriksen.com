@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions}) => {
           reject(result.errors)
         }
 
-        const template = path.resolve('src/blog/post.js');
+        const template = path.resolve('src/blog/post.jsx');
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           let slug = node.frontmatter.slug;
           createPage({
