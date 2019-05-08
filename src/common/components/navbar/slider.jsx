@@ -6,7 +6,12 @@ import Link from '../../links/flex-link';
 const NavbarSlider = (props) => {
   const [open, setOpen] = useState(false);
 
-  const { links, setScroll, scroll } = props;
+  const {
+    links,
+    setScroll,
+    scroll,
+    posts,
+  } = props;
 
   return (
     <section className="navbar__group">
@@ -36,6 +41,18 @@ const NavbarSlider = (props) => {
             </Link>
           ))}
         </div>
+        <h3 className="navbar__menu__title">Latest Posts</h3>
+        <div className="navbar__menu__items">
+          {posts.map(post => (
+            <Link
+              to={post.slug}
+              key={post.slug}
+              className="pill"
+            >
+              {post.title}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -46,6 +63,12 @@ NavbarSlider.propTypes = {
     PropTypes.shape({
       to: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      slug: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
     }),
   ).isRequired,
   setScroll: PropTypes.func.isRequired,
