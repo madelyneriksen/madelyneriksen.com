@@ -23,6 +23,7 @@ const NavbarSlider = (props) => {
       <div
         className={`navbar__menu${open ? ' navbar__menu--active' : ''}`}
       >
+        <h3 className="navbar__menu__title">Navigation</h3>
         <div className="navbar__menu__items">
           {links.map(link => (
             <Link
