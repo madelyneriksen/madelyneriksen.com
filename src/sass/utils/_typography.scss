@@ -69,4 +69,10 @@ body {
     list-style-position: inside;
     margin-bottom: $small;
   }
+
+  hr {
+    border: none;
+    border-top: 1px solid black;
+    max-width: 16rem;
+  }
 }
