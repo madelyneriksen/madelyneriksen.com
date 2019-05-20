@@ -24,7 +24,7 @@ A [great article](https://mitchel.me/2017/django-service-objects/) from 2017 by 
 
 [You can check out](https://github.com/mixxorz/django-service-objects) this really great module, but I have found in some applications it may not be sufficient, especially if you are using Django Rest Framework, Graphene, or (ironically) Django forms.
 
-The problem stems from Single Responsibility Principle (SRP). `service_objects` as implemented in the model are both how to present and how to preform an action. You _should_ be able to change your controller layer without changing or breaking the underlying service.
+The problem stems from Single Responsibility Principle (SRP). `service_objects` as implemented in the model are both how to present and how to perform an action. You _should_ be able to change your controller layer without changing or breaking the underlying service.
 
 If your application is simple enough, `service_objects` is a great way to break business logic out of your models. But if you need more flexibility or compatibility at a deeper level with other modules (like `rest_framework`), you might want to roll your own.
 
