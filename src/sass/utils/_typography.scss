@@ -1,12 +1,11 @@
-// Fonts Import
-@import url('https://rsms.me/inter/inter.css');
+// Fonts Setup
 
-$display-font: "Inter";
-$body-font: "Inter";
+$display-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$body-font: $display-font;
 
 body {
   font-size: 1rem;
-  font-family: $body-font, sans-serif;
+  font-family: $body-font;
   color: $dark;
   background-color: #fff;
   padding: 0;
@@ -34,7 +33,6 @@ body {
 
   p {
     font-family: inherit;
-    font-weight: 300;
     line-height: 1.8;
     text-rendering: optimizeLegibility;
   }
