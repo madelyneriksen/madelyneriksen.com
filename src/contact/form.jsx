@@ -1,6 +1,14 @@
 import React from 'react';
 
 
+const encode = (data) => {
+  // Url encodes an object.
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
+
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
