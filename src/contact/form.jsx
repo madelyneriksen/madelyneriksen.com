@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../common/components/header';
 
 
 export default class ContactForm extends React.Component {
@@ -14,7 +13,6 @@ export default class ContactForm extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.url = 'https://www.briskforms.com/go/e1229760edb271ce7bf33a755f5ff529';
   }
-
 
   componentDidMount() {
     try {
@@ -42,21 +40,6 @@ export default class ContactForm extends React.Component {
     } = this.state;
     return (
       <>
-        <Header
-          text="Contact Me"
-          subtitle="Have some questions or comments for me? Get in touch here!"
-        />
-        <section className="text-block--preview typography">
-          <p className="text-block__content">
-            Contact me via email at
-            {' '}
-            <a href="mailto:hello@madelyneriksen.com">hello@madelyneriksen.com</a>
-            , through my
-            {' '}
-            <a href="https://github.com/madelyneriksen">Github account</a>
-            , or use the form below! I will get back to you as fast as I can.
-          </p>
-        </section>
         {alert
             && (
               <div
