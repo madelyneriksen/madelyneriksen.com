@@ -55,7 +55,7 @@ export const query = graphql`
               src
             }
             fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
