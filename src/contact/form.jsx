@@ -11,16 +11,6 @@ export default class ContactForm extends React.Component {
       alert: '',
     };
     this.onChange = this.onChange.bind(this);
-    this.url = 'https://www.briskforms.com/go/e1229760edb271ce7bf33a755f5ff529';
-  }
-
-  componentDidMount() {
-    try {
-      const url = new URL(window.location.href);
-      this.setState({ alert: url.searchParams.get('alert') });
-    } catch (err) {
-      // empty
-    }
   }
 
   onChange(fieldName) {
@@ -29,6 +19,23 @@ export default class ContactForm extends React.Component {
         [fieldName]: event.target.value,
       });
     };
+  }
+
+  handleSubmit(event) {
+    if (!window.fetch) {
+      // Progressive enhancement.
+      return
+    };
+    event.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: encode({ "form-name": "contact",  ...this.state}),
+    }).then(() => {
+      this.setState({alert: "Success! Your message was sent successfully."});
+    }).catch((error) => {
+      this.setState({alert: "We hit a snag processing your request!"})
+    });
   }
 
   render() {
@@ -54,9 +61,22 @@ export default class ContactForm extends React.Component {
         }
         <form
           className="form"
-          action={this.url}
           method="POST"
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="url"
+          onSubmit={this.handleSubmit}
         >
+          <label
+            htmlFor="url"
+            hidden={true}
+          >
+            Don't fill this out if you are human!
+            <input
+              type="text"
+              name="url"
+            />
+          </label>
           <label
             htmlFor="name"
             className="form__label"
