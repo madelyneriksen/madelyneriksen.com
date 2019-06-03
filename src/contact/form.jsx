@@ -32,10 +32,20 @@ export default class ContactForm extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
-    fetch("/contact/", {
+    const {
+      name,
+      email,
+      message,
+    } = this.state;
+    fetch("/contact", {
       method: "POST",
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
-      body: encode({ "form-name": "contact",  ...this.state}),
+      body: encode({
+        "form-name": "contact",
+        name,
+        email,
+        message,
+      }),
     }).then(() => {
       this.setState({alert: "Success! Your message was sent successfully."});
     }).catch((error) => {
