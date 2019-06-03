@@ -19,6 +19,7 @@ export default class ContactForm extends React.Component {
       alert: '',
     };
     this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChange(fieldName) {
@@ -29,7 +30,7 @@ export default class ContactForm extends React.Component {
     };
   }
 
-  handleSubmit(event) {
+  onSubmit(event) {
     if (!window.fetch) {
       // Progressive enhancement.
       return
