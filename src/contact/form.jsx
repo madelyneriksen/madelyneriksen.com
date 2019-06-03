@@ -31,12 +31,8 @@ export default class ContactForm extends React.Component {
   }
 
   onSubmit(event) {
-    if (!window.fetch) {
-      // Progressive enhancement.
-      return
-    };
     event.preventDefault();
-    fetch("/", {
+    fetch("/contact/", {
       method: "POST",
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
       body: encode({ "form-name": "contact",  ...this.state}),
