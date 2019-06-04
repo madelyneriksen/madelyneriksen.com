@@ -47,7 +47,7 @@ export default class ContactForm extends React.Component {
         message,
       }),
     }).then(() => {
-      this.setState({alert: "Success! Your message was sent successfully."});
+      this.setState({alert: "Awesome! Your message was sent successfully!"});
     }).catch((error) => {
       this.setState({alert: "We hit a snag processing your request!"})
     });
@@ -68,9 +68,7 @@ export default class ContactForm extends React.Component {
                 className="alert alert--success"
                 role="alert"
               >
-                Awesome! Your message was sent successfully!
-                {' '}
-                <span role="img" aria-label="celebrate!">🙌</span>
+                {alert}
               </div>
             )
         }
@@ -78,6 +76,7 @@ export default class ContactForm extends React.Component {
           className="form"
           method="POST"
           name="contact"
+          action="/contact"
           data-netlify="true"
           netlify-honeypot="url"
           onSubmit={this.handleSubmit}
