@@ -40,6 +40,7 @@ export default class ContactForm extends React.Component {
     fetch("/contact", {
       method: "POST",
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      redirect: 'manual',
       body: encode({
         "form-name": "contact",
         name,
@@ -47,7 +48,7 @@ export default class ContactForm extends React.Component {
         message,
       }),
     }).then(() => {
-      this.setState({alert: "Awesome! Your message was sent successfully!"});
+      this.setState({alert: "Awesome! Your message was sent successfully! 🙌"});
     }).catch((error) => {
       this.setState({alert: "We hit a snag processing your request!"})
     });
@@ -79,7 +80,7 @@ export default class ContactForm extends React.Component {
           action="/contact"
           data-netlify="true"
           netlify-honeypot="url"
-          onSubmit={this.handleSubmit}
+          onSubmit={this.onSubmit}
         >
           <label
             htmlFor="url"
@@ -136,12 +137,11 @@ export default class ContactForm extends React.Component {
               value={message}
             />
           </label>
-          <button
+          <input
             type="submit"
             className="button--rose form__submit"
-          >
-            SEND MESSAGE
-          </button>
+            value="SEND MESSAGE"
+          />
         </form>
       </>
     );
