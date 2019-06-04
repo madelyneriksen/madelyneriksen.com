@@ -1,5 +1,12 @@
 import React from 'react';
-import Header from '../common/components/header';
+
+
+const encode = (data) => {
+  // Url encodes an object.
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 
 export default class ContactForm extends React.Component {
@@ -12,17 +19,7 @@ export default class ContactForm extends React.Component {
       alert: '',
     };
     this.onChange = this.onChange.bind(this);
-    this.url = 'https://www.briskforms.com/go/e1229760edb271ce7bf33a755f5ff529';
-  }
-
-
-  componentDidMount() {
-    try {
-      const url = new URL(window.location.href);
-      this.setState({ alert: url.searchParams.get('alert') });
-    } catch (err) {
-      // empty
-    }
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChange(fieldName) {
@@ -31,6 +28,30 @@ export default class ContactForm extends React.Component {
         [fieldName]: event.target.value,
       });
     };
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+    const {
+      name,
+      email,
+      message,
+    } = this.state;
+    fetch("/contact", {
+      method: "POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      redirect: 'manual',
+      body: encode({
+        "form-name": "contact",
+        name,
+        email,
+        message,
+      }),
+    }).then(() => {
+      this.setState({alert: "Awesome! Your message was sent successfully! 🙌"});
+    }).catch((error) => {
+      this.setState({alert: "We hit a snag processing your request!"})
+    });
   }
 
   render() {
@@ -42,38 +63,35 @@ export default class ContactForm extends React.Component {
     } = this.state;
     return (
       <>
-        <Header
-          text="Contact Me"
-          subtitle="Have some questions or comments for me? Get in touch here!"
-        />
-        <section className="text-block--preview typography">
-          <p className="text-block__content">
-            Contact me via email at
-            {' '}
-            <a href="mailto:hello@madelyneriksen.com">hello@madelyneriksen.com</a>
-            , through my
-            {' '}
-            <a href="https://github.com/madelyneriksen">Github account</a>
-            , or use the form below! I will get back to you as fast as I can.
-          </p>
-        </section>
         {alert
             && (
               <div
                 className="alert alert--success"
                 role="alert"
               >
-                Awesome! Your message was sent successfully!
-                {' '}
-                <span role="img" aria-label="celebrate!">🙌</span>
+                {alert}
               </div>
             )
         }
         <form
           className="form"
-          action={this.url}
           method="POST"
+          name="contact"
+          action="/contact"
+          data-netlify="true"
+          netlify-honeypot="url"
+          onSubmit={this.onSubmit}
         >
+          <label
+            htmlFor="url"
+            hidden={true}
+          >
+            Don't fill this out if you are human!
+            <input
+              type="text"
+              name="url"
+            />
+          </label>
           <label
             htmlFor="name"
             className="form__label"
@@ -119,12 +137,11 @@ export default class ContactForm extends React.Component {
               value={message}
             />
           </label>
-          <button
+          <input
             type="submit"
             className="button--rose form__submit"
-          >
-            SEND MESSAGE
-          </button>
+            value="SEND MESSAGE"
+          />
         </form>
       </>
     );
