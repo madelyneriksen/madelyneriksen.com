@@ -1,13 +1,9 @@
 import React from 'react';
 
 
-const encode = (data) => {
-  // Url encodes an object.
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
-
+const encode = data => Object.keys(data)
+  .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+  .join('&');
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -37,20 +33,20 @@ export default class ContactForm extends React.Component {
       email,
       message,
     } = this.state;
-    fetch("/contact", {
-      method: "POST",
-      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    fetch('/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       redirect: 'manual',
       body: encode({
-        "form-name": "contact",
+        'form-name': 'contact',
         name,
         email,
         message,
       }),
     }).then(() => {
-      this.setState({alert: "Awesome! Your message was sent successfully! 🙌"});
-    }).catch((error) => {
-      this.setState({alert: "We hit a snag processing your request!"})
+      this.setState({ alert: 'Awesome! Your message was sent successfully! 🙌' });
+    }).catch(() => {
+      this.setState({ alert: 'We hit a snag processing your request!' });
     });
   }
 
@@ -84,9 +80,9 @@ export default class ContactForm extends React.Component {
         >
           <label
             htmlFor="url"
-            hidden={true}
+            hidden
           >
-            Don't fill this out if you are human!
+            Don&apos;t fill this out if you are human!
             <input
               type="text"
               name="url"
