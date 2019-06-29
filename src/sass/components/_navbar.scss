@@ -52,6 +52,10 @@
       box-shadow: $glow;
       color: white;
       border: 0;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 

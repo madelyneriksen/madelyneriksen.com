@@ -12,5 +12,9 @@
     background-image: $primary-gradient;
     box-shadow: $glow;
     color: $white;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
