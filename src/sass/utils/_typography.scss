@@ -25,6 +25,9 @@ a {
  * so it ends up being really handy for, say, markdown. */
 
 .typography {
+  max-width: $text-width;
+  margin: 0 auto;
+
   h1, h2, h3, h4, h5, h6, blockquote, q,
   p, ul {
     padding: 0 .5rem;
