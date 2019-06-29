@@ -8,11 +8,24 @@ exports.createPages = ({ graphql, actions}) => {
       graphql(
         `
           {
-            allMarkdownRemark(filter: {frontmatter: {type: {eq: "post"}}}) {
+            allPosts: allMarkdownRemark(
+            filter: {frontmatter: {type: {eq: "post"}}},
+            sort: {fields: frontmatter___date, order: DESC},
+            ) {
               edges {
                 node {
                   frontmatter {
                     slug
+                  }
+                }
+              }
+              group(field: frontmatter___category) {
+                fieldValue
+                edges {
+                  node {
+                    frontmatter {
+                      slug
+                    }
                   }
                 }
               }
@@ -23,15 +36,25 @@ exports.createPages = ({ graphql, actions}) => {
         if (result.errors) {
           reject(result.errors)
         }
+        const allPosts = result.data.allPosts.edges;
 
-        const template = path.resolve('src/blog/post.jsx');
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          let slug = node.frontmatter.slug;
+        // Eventually will use this for category pages.
+        const groupedPosts = result.data.allPosts.group;
+
+        const paginationTemplate = path.resolve('src/blog/index.jsx');
+        const postsPerPage = 5;
+        let numPages = Math.ceil(allPosts.length / postsPerPage);
+
+        // Creating the main blog index
+        Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
-            path: slug,
-            component: template,
+            path: i === 0 ? '/blog' : `/blog/${i + 1}`,
+            component: paginationTemplate,
             context: {
-              slug,
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              nextPage: `/blog/${i + 2}`,
+              pageNumber: i + 1,
             }
           })
         })
