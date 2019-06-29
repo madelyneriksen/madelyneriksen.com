@@ -1,27 +1,17 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import Layout from '../common/layouts/main';
 import Header from '../common/components/header';
-import Preview from '../blog/preview';
 
 const Index = ({ data }) => (
   <Layout
-    title="Blog Index"
+    title="Madelyn Eriksen -  Fullstack Python and React Developer in Los Angeles"
     description="I'm a developer writing about Python, Javascript, and frameworks like React."
   >
     <Header text="madelyn.eriksen()" subtitle="A programming blog by a hacker girl." />
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <Preview
-        key={node.frontmatter.slug}
-        excerpt={node.excerpt}
-        slug={node.frontmatter.slug}
-        title={node.frontmatter.title}
-        category={node.frontmatter.category}
-        image={node.frontmatter.postImage.childImageSharp.fluid}
-        date={node.frontmatter.date}
-      />
-    ))}
+    <section className="typography" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </Layout>
 );
 
@@ -34,27 +24,10 @@ export default Index;
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      filter: {frontmatter: {type: {eq: "post"}}},
-      sort: {fields: [frontmatter___date], order: DESC}) {
-      edges {
-        node {
-          html
-          excerpt(format: HTML, pruneLength: 255)
-          frontmatter {
-            slug
-            title
-            category
-            date(formatString: "MMM Do, YYYY")
-            postImage {
-              childImageSharp {
-                fluid(maxWidth: 1080) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
+    markdownRemark(frontmatter: {name: {eq: "homepage"}}) {
+      html
+      frontmatter {
+        title
       }
     }
   }
