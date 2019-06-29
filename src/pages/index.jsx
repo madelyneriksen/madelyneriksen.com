@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../common/layouts/main';
 import Header from '../common/components/header';
@@ -12,6 +12,20 @@ const Index = ({ data }) => (
   >
     <Header text="madelyn.eriksen()" subtitle="A programming blog by a hacker girl." />
     <section className="typography" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <section className="typography">
+      <h3>
+        Latest Blog Posts
+        <span role="img" aria-label=""> 📃 </span>
+      </h3>
+      <ul>
+        {data.latestPosts.edges.map(({ node }) => (
+          <li>
+            <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
+          </li>
+        ))}
+        <p><Link to="/blog/">View More Posts</Link></p>
+      </ul>
+    </section>
   </Layout>
 );
 
@@ -28,6 +42,20 @@ export const query = graphql`
       html
       frontmatter {
         title
+      }
+    },
+    latestPosts: allMarkdownRemark(
+      filter: {frontmatter: {type: {eq: "post"}}},
+      sort: {fields: [frontmatter___date], order: DESC},
+      limit: 5,
+    ) {
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+          }
+        }
       }
     }
   }
