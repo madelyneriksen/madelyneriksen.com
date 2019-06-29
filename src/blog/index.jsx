@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../common/layouts/main';
 import Header from '../common/components/header';
 import Preview from './preview';
+import Pagination from './pagination';
 
 const Index = ({ data, pageContext }) => (
   <Layout
@@ -22,6 +23,7 @@ const Index = ({ data, pageContext }) => (
         date={node.frontmatter.date}
       />
     ))}
+    <Pagination {...pageContext} hasNextPage={data.posts.pageInfo.hasNextPage} />
   </Layout>
 );
 

@@ -1,0 +1,13 @@
+// Pagination block for the bottom of the blog.
+
+.pagination {
+  margin: 0 auto;
+  max-width: $text-width;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    text-decoration: none;
+  }
+}
