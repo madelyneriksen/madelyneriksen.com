@@ -42,6 +42,7 @@ exports.createPages = ({ graphql, actions}) => {
         const groupedPosts = result.data.allPosts.group;
 
         const paginationTemplate = path.resolve('src/blog/index.jsx');
+        const postTemplate = path.resolve('src/blog/post.jsx');
         const postsPerPage = 5;
         let numPages = Math.ceil(allPosts.length / postsPerPage);
 
@@ -58,6 +59,17 @@ exports.createPages = ({ graphql, actions}) => {
             }
           })
         })
+
+        allPosts.forEach(({ node }) => {
+          const slug = node.frontmatter.slug
+          createPage({
+            path: slug,
+            component: postTemplate,
+            context: {
+              slug,
+            }
+          })
+        });
       })
     )
   })
