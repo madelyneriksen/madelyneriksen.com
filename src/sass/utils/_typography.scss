@@ -12,6 +12,13 @@ body {
   margin: 0;
 }
 
+a {
+  color: $rose;
+  &:hover {
+    color: $plum;
+  }
+}
+
 /* "Typography" styles.
  *
  * These hit all elements inside something tagged typography,
@@ -37,9 +44,6 @@ body {
     text-rendering: optimizeLegibility;
   }
 
-  a {
-    color: $rose;
-  }
 
   blockquote {
     font-style: italic;
