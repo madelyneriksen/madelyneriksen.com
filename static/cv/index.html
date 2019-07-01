@@ -19,34 +19,36 @@
 <header>
 <h1 class="title">Madelyn Eriksen - Fullstack Developer</h1>
 </header>
-<p>Los Angeles, CA - hello@madelyneriksen.com - www.github.com/madelyneriksen - (626) 698-5374</p>
-<hr />
-<p>I am a fullstack developer building and deploying containerized web apps powered by React and Python. I create dynamic backends with Python3, automate server and cluster administration with Ansible, and test my work with Pytest and Jest.</p>
-<p>My personal development projects include contributing to the Gatsby React framework with starters and issues, creating programming productivity tools, and writing tutorials to reinforce what I have learned and help others.</p>
+<p class="center">
+Los Angeles, CA / hello@madelyneriksen.com / www.github.com/madelyneriksen / (626) 698-5374
+</p>
+<hr>
+<p>I am a Python and React engineer creating modern web applications. I build dynamic backends with Python3, automate server and cluster administration with Ansible, and test my work with Pytest and Jest.</p>
+<p>I have more than two years of experience in delivering products using Python, Django, and React. Currently I am learning Rust to create web assembly and FFI libraries to speed up “hot paths”.</p>
 <h2 id="work-experience">Work Experience</h2>
 <h3 id="fullstack-developer">Fullstack Developer</h3>
 <p><em>Ram Technologies</em> | 2017 - Present</p>
 <p><strong>Key Technologies:</strong> React, Python, Django, Ansible, Kubernetes, Scrapy, Selenium</p>
-<p><strong>Overview:</strong> I built and maintain an internal service using React and Django for managing data on a catalog of 30,000+ active items in multiple marketplaces. My CI/CD pipeline builds and tests on-premise and cloud-native applications.</p>
+<p><strong>Overview:</strong> I built and maintain an internal service using React and Django for managing data on a catalog of 60,000+ active items in multiple marketplaces. The service uses natural language processing tools and a Scrapy/Selenium based web scraper to research competitors and track market movements.</p>
 <p><strong>Highlights:</strong></p>
 <ul>
-<li>Built a real-time “ticking” dashboard with React and Websockets.</li>
+<li>Created and deployed data-rich interfaces using React and Django Rest Framework.</li>
 <li>Scraped E-Commerce data (listings, prices, reviews, etc.) from the web using Scrapy and Selenium.</li>
-<li>Replaced legacy PHP-based E-Commerce system with Django/Turbolinks/Stimulus stack.</li>
-<li>Bootstrapped and managed a Kubernetes cluster on bare metal using Ansible and Kubeadm.</li>
+<li>Replaced slow PHP E-Commerce site with a new Django site, slashing load times and increasing leads by 164%.</li>
+<li>Bootstrapped and managed a Kubernetes cluster on-premise, using Ansible and Kubeadm.</li>
 </ul>
 <h2 id="open-source-and-community-work">Open Source and Community Work</h2>
 <ul>
 <li><p><strong>Gatsby Framework</strong></p>
-<p>I’m a maintainer/contributor for Gatsby, a framework for static React applications. I reproduce issues, help new developers, and contribute new starters and themes. Currently, I am experimenting with static E-Commerce websites using Gatsby and build webhooks, to replace older SSR frameworks like Magento.</p></li>
+<p>I’m a contributor to Gatsby, a framework for JAMstack websites. I reproduce issues, help new developers, and contribute new starters and themes. Currently, I am building static E-Commerce websites using Gatsby and webhooks, to replace older SSR frameworks like Magento.</p></li>
 <li><p><strong>madelyn.eriksen()</strong></p>
-<p><a href="https://www.madelyneriksen.com">www.madelyneriksen.com</a> is my blog for writing about React, Python, and general software development on Linux. The site itself is built using React and Gatsby, rendered as static files.</p></li>
+<p>www.madelyneriksen.com is my blog for writing about React, Python, and general software development on Linux. The site itself is built using React and Gatsby, using SASS for styling.</p></li>
 <li><strong>Other OSS/Volunteer Projects</strong>
 <ul>
 <li>A CLI tool named “Flatware” for generating boilerplate code quickly.</li>
-<li>I organized a weekly mentorship/class for coworkers interested in learning Python.</li>
+<li>I run a weekly class for non-technical coworkers interested in learning Python.</li>
 <li>Python project templates for creating new applications with Docker, Pytest, type-checking, and more.</li>
-<li>Many more side projects in varying states of completion on my Github, <span class="citation" data-cites="madelyneriksen">@madelyneriksen</span>.</li>
+<li>Many more side projects, tests, and experiments on my Github, <span class="citation" data-cites="madelyneriksen">@madelyneriksen</span>.</li>
 </ul></li>
 </ul>
 <!-- STYLES - For HTML Version -->
@@ -54,8 +56,9 @@
   body {
     max-width: 60rem;
     margin: 0 auto;
-    font-family: sans-serif;
-    font-size: 1rem;
+    padding: .25rem;
+    font: 1rem/1.4 sans-serif;
+    color: #343434;
   }
   hr {
     height: 1px;
@@ -63,10 +66,17 @@
     background-color: gray;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 600;
+  }
+  h1 {
+    text-align: center;
+    margin: 0;
   }
   a {
     color: #33f;
+  }
+  .center {
+    text-align: center;
   }
 </style>
 <!-- End Styles -->
