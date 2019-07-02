@@ -18,7 +18,7 @@
     margin: $medium $small;
     border: 0;
 
-    &:hover {
+    &:hover, &:focus {
       color: #ffffffdd;
       transform: translateY(-3px);
       box-shadow: $glow, 0 6px 9px rgba($dark, .25);
@@ -35,7 +35,7 @@
     &:visited {
       color: $hex;
     }
-    &:hover {
+    &:hover, &:focus {
       background-color: rgba($hex, .3);
     }
   }
