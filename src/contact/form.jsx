@@ -135,7 +135,7 @@ export default class ContactForm extends React.Component {
           </label>
           <input
             type="submit"
-            className="button--rose form__submit"
+            className="button--cta form__submit"
             value="SEND MESSAGE"
           />
         </form>
