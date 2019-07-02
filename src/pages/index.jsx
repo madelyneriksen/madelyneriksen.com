@@ -11,8 +11,8 @@ const Index = ({ data }) => (
     description="I'm a developer writing about Python, Javascript, and frameworks like React."
   >
     <Header
-      text="madelyn.eriksen()"
-      subtitle="Fullstack Python and Javascript Engineer."
+      text="Fullstack Web Developer"
+      subtitle="Deploying new solutions to the web, with React, Python, and containers."
       ctaTo="contact/"
       ctaText="CONTACT ME"
     />

@@ -1,4 +1,4 @@
-@mixin header {
+%header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,9 +12,9 @@
 }
 
 .header {
-  @include header;
+  @extend %header;
   &--dark {
-    @include header;
+    @extend %header;
   }
   &:after {
     width: 100%;
@@ -29,10 +29,11 @@
     color: #fefefe;
     z-index: 1;
     line-height: 1.3;
+    margin: $small 0;
+
     &--dark {
+      @extend .header__text;
       color: #444;
-      z-index: 1;
-      line-height: 1.3;
     }
   }
   &__title {
