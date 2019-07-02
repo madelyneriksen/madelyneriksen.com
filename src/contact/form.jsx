@@ -101,6 +101,7 @@ export default class ContactForm extends React.Component {
               required
               onChange={this.onChange('name')}
               value={name}
+              autoFocus
             />
           </label>
           <label
