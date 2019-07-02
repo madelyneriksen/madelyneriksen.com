@@ -4,10 +4,25 @@
   transition: .2s ease;
   display: inline-block;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: bold;
   letter-spacing: 2px;
   border-radius: $extra-small;
   cursor: pointer;
+
+  &--cta {
+    // Call to action button with a cute gradient.
+    @extend .button;
+    background-image: $secondary-gradient;
+    color: white;
+    box-shadow: $glow;
+    margin: $large $small;
+
+    &:hover {
+      color: #ffffffdd;
+      transform: translateY(-3px);
+      box-shadow: $glow, 0 6px 9px rgba($dark, .25);
+    }
+  }
 }
 
 @each $color, $hex in $colors {

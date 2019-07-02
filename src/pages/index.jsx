@@ -10,7 +10,12 @@ const Index = ({ data }) => (
     title="Madelyn Eriksen -  Fullstack Python and React Developer in Los Angeles"
     description="I'm a developer writing about Python, Javascript, and frameworks like React."
   >
-    <Header text="madelyn.eriksen()" subtitle="Web Development, from start to finish." />
+    <Header
+      text="madelyn.eriksen()"
+      subtitle="Fullstack Python and Javascript Engineer."
+      ctaTo="contact/"
+      ctaText="CONTACT ME"
+    />
     <section className="typography" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     <section className="typography">
       <h3>
