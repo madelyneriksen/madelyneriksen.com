@@ -28,6 +28,14 @@ export default () => (
       <p className="footer__link">Copyright 2018-2019 Madelyn Eriksen</p>
     </section>
     <section className="footer__links">
+      {/* gatsby-catch-links tries to intercept this, hence the target prop. */}
+      <a
+        target="_blank"
+        href="/cv/"
+        className="footer__link"
+      >
+        My Resume
+      </a>
       <Link
         to="contact"
         className="footer__link"
