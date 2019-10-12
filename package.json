@@ -7,7 +7,8 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "eslint 'src/**' --ignore-pattern *.scss"
+    "test": "eslint 'src/**' --ignore-pattern *.scss",
+    "format": "eslint 'src/**' --ignore-pattern *.scss --fix"
   },
   "dependencies": {
     "gatsby": "^2.15.29",
