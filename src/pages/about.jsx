@@ -16,7 +16,7 @@ const About = ({ data }) => {
         <AboutContent
           post={post.html}
           title={post.frontmatter.title}
-          image={post.frontmatter.postImage.childImageSharp.fluid}
+          image={post.frontmatter.postImage}
         />
       </div>
     </Layout>

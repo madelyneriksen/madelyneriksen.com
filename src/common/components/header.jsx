@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
 
-const Header = (props) => {
-  const {
-    image,
-    text,
-    subtitle,
-    ctaTo,
-    ctaText,
-  } = props;
+const Header = ({
+  image,
+  text,
+  subtitle,
+  ctaTo,
+  ctaText,
+}) => {
   const textClass = image ? 'header__text' : 'header__text--dark';
   return (
     <header
@@ -31,7 +30,7 @@ const Header = (props) => {
       {image
           && (
             <Img
-              fluid={image}
+              fluid={image.childImageSharp.fluid}
               alt=""
               className="header__image"
             />

@@ -19,7 +19,7 @@ const Index = ({ data, pageContext }) => (
         slug={node.frontmatter.slug}
         title={node.frontmatter.title}
         category={node.frontmatter.category}
-        image={node.frontmatter.postImage.childImageSharp.fluid}
+        image={node.frontmatter.postImage}
         date={node.frontmatter.date}
       />
     ))}

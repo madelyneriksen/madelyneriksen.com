@@ -26,7 +26,7 @@ const Post = ({ data }) => {
         title={post.frontmatter.title}
         category={post.frontmatter.category}
         date={post.frontmatter.date}
-        image={post.frontmatter.postImage.childImageSharp.fluid}
+        image={post.frontmatter.postImage}
       />
     </Layout>
   );
