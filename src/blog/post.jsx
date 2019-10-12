@@ -8,25 +8,34 @@ import PostContent from './post-content';
 
 const Post = ({ data }) => {
   const { post } = data;
-  const { date } = data.date.frontmatter;
+
+  const {
+    metaDescription,
+    title,
+    postImage,
+    slug,
+    date,
+    category,
+  } = post.frontmatter;
+
   return (
     <Layout
-      title={post.frontmatter.title}
-      description={post.frontmatter.metaDescription}
+      title={title}
+      description={metaDescription}
     >
       <Seo
-        title={post.frontmatter.title}
-        image={post.frontmatter.postImage.childImageSharp.original.src}
+        title={title}
+        image={postImage && postImage.childImageSharp.original.src}
         date={date}
-        description={post.frontmatter.metaDescription}
-        slug={post.frontmatter.slug}
+        description={metaDescription}
+        slug={slug}
       />
       <PostContent
         post={post.html}
-        title={post.frontmatter.title}
-        category={post.frontmatter.category}
-        date={post.frontmatter.date}
-        image={post.frontmatter.postImage}
+        title={title}
+        category={category}
+        date={date}
+        image={postImage}
       />
     </Layout>
   );

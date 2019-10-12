@@ -10,11 +10,23 @@ const Header = ({
   subtitle,
   ctaTo,
   ctaText,
+  gradient,
 }) => {
-  const textClass = image ? 'header__text' : 'header__text--dark';
+  // Calculate the desired classnames for the header.
+  let textClass = 'header__text--dark';
+  let headerClass = 'header--dark';
+
+  if (image) {
+    headerClass = 'header';
+    textClass = 'header__text';
+  } else if (gradient) {
+    headerClass = 'header--gradient';
+    textClass = 'header__text';
+  }
+
   return (
     <header
-      className={image ? 'header' : 'header--dark'}
+      className={headerClass}
     >
       <h1
         className={`${textClass} header__title`}
@@ -47,12 +59,14 @@ Header.propTypes = {
   subtitle: PropTypes.string,
   ctaTo: PropTypes.string,
   ctaText: PropTypes.string,
+  gradient: PropTypes.bool,
 };
 
 Header.defaultProps = {
   subtitle: false,
   ctaTo: false,
   ctaText: false,
+  gradient: false,
 };
 
 export default Header;

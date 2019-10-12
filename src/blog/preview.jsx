@@ -14,9 +14,16 @@ const Preview = (props) => {
     excerpt,
     slug,
   } = props;
+
+  const headerProps = {
+    image,
+    text: title,
+    gradient: !image,
+  };
+
   return (
     <article className="text-block--preview">
-      <Header text={title} image={image} />
+      <Header {...headerProps} />
       <div className="text-block__info">
         <p className="text-block__info__tooltip">{date}</p>
         <p className="text-block__info__tooltip">{category}</p>

@@ -16,6 +16,10 @@
   &--dark {
     @extend %header;
   }
+  &--gradient {
+    @extend %header;
+    background-image: $secondary-gradient;
+  }
   &:after {
     width: 100%;
     height: 100%;
