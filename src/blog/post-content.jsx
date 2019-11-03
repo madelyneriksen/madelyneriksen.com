@@ -14,7 +14,7 @@ const PostContent = (props) => {
   } = props;
   return (
     <article className="text-block">
-      <Header text={title} image={image} />
+      <Header text={title} image={image} gradient={!image} />
       <div className="text-block__info">
         <p className="text-block__info__tooltip">{date}</p>
         <p className="text-block__info__tooltip">{category}</p>
