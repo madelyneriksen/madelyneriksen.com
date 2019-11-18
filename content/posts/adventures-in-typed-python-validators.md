@@ -301,7 +301,7 @@ Unlike a lot of compiled languages with static typing, this is not zero cost. Co
 
 As additional validators are added, the times get worse. You are going to get better performance in Python by skipping this level of safety. Then again, this is _Python_. if you care that much about performance and type safety, you're probably looking for a language called [Rust](https://www.rust-lang.org/).
 
-Finally, there is nothing stopping someone from grabbing `.value` directly. There isn't a way to avoid that in Python when using type inheritance (For "single level". You _can_ name it `._value` to indicate it shouldn't be used, but someone can use it anyways. The Python philosophy about private variables is ["We are all adults here"](https://mail.python.org/pipermail/tutor/2003-October/025932.html), which translates to "Don't use private APIs unless you like breaking code and no support".
+Finally, there is nothing stopping someone from grabbing `.value` directly. There isn't a way to avoid that in Python when using type inheritance. You _can_ name it `._value` to indicate it shouldn't be used, but someone can use it anyways. The Python philosophy about private variables is ["We are all adults here"](https://mail.python.org/pipermail/tutor/2003-October/025932.html), which translates to "Don't use private APIs unless you like breaking code and no support".
 
 ---
 
