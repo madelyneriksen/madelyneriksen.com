@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from '../../links/flex-link';
 import NavbarSlider from './slider';
 
 
-const Navbar = (props) => {
-  const { scroll, setScroll } = props;
+const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <StaticQuery
@@ -61,7 +59,6 @@ const Navbar = (props) => {
                 <button
                   onClick={() => {
                     setOpen(!open);
-                    setScroll(!scroll);
                   }}
                   type="button"
                   className="navbar__link"
@@ -80,11 +77,6 @@ const Navbar = (props) => {
       }}
     />
   );
-};
-
-Navbar.propTypes = {
-  scroll: PropTypes.bool.isRequired,
-  setScroll: PropTypes.func.isRequired,
 };
 
 export default Navbar;

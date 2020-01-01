@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Navbar from '../components/navbar';
@@ -7,7 +7,6 @@ import '../../sass/index.scss';
 
 
 const Layout = (props) => {
-  const [scroll, setScroll] = useState(true);
   const {
     description,
     title,
@@ -16,7 +15,7 @@ const Layout = (props) => {
   return (
     <React.Fragment>
       <Helmet>
-        <body className={scroll ? null : 'noscroll'} />
+        <body />
         <title>{`${title} - madelyn.eriksen()`}</title>
         {description
             && <meta name="description" content={description} />
@@ -26,7 +25,7 @@ const Layout = (props) => {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Helmet>
-      <Navbar setScroll={setScroll} scroll={scroll} />
+      <Navbar />
       <main>
         {children}
       </main>
