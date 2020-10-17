@@ -13,14 +13,13 @@ You can build this project yourself, if you have NPM and Gatsby CLI installed.
 git clone https://github.com/madelyneriksen/madelyneriksen.com
 cd madelyneriksen.com
 # Install dependencies.
-npm i
+yarn install
 # Build the site
 gatsby build
 gatsby serve
 ```
 
-## Special Thanks
+## Thanks
 
 * The Gatsby.js team, for building an awesome product.
-* [Briskforms](https://www.briskforms.com/) for their open source form management
 * [Netlify](https://netlify.com/) for hosting and CI
